@@ -46,147 +46,148 @@
                 }
 
                 // Determina la posizione in base ai parametri
-                if (eta >= 18) {
-                    if (sesso === 'maschio') {
-                        if (altezza > 195) {
-                            positionInfo = '🏉 **Seconda Linea (Lock)**: La tua altezza imponente ti rende perfetto per la seconda linea. Sarai il colosso della squadra, eccellendo nei salti e nelle mischie, con un impatto dominante in campo.';
-                            positionImage = 'https://lh3.googleusercontent.com/DMr72tWzQqOtc6fKCyiMzQJGrlEVTGkkk1YaSNpb12ZiCZ2CaMq4EugWXpnau_8Vr8dVmT2ZKrF7dQj1SkGV';
-                            positionCaption = 'Eben Etzebeth, Sudafrica';
-                        } else if (peso > 110) {
-                            positionInfo = '💪 **Pilone (Prop)**: La tua forza e corporatura ti rendono ideale per il ruolo di pilone. Sarai un pilastro della mischia, garantendo stabilità e potenza a ogni scrimmage.';
-                            positionImage = 'https://focus.belfasttelegraph.co.uk/thumbor/Pip1f0pYTJf8a9hbwfThyUwFKPw=/0x17:3150x1754/960x640/prod-mh-ireland/e1fca0fe-9723-11ed-8189-0210609a3fe2';
-                            positionCaption = 'Tadhg Furlong, Irlanda';
-                        } else if (altezza < 168) {
-                            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con la tua altezza inferiore alla media, il ruolo di mediano di mischia è perfetto per te. Sarai agile e veloce, gestendo il gioco con intelligenza e precisione.';
-                            positionImage = 'https://www.allblacks.com/assets/Uploads/h_00091547.jpg';
-                            positionCaption = 'Faf de Klerk, Sudafrica';
-                        } else if (altezza > 180) {
-                            positionInfo = '🏉 **Tallonatore (Hooker)**: La tua altezza ti rende perfetto per il ruolo di tallonatore. Sarai fondamentale nelle mischie e nelle touche, mostrando forza e tecnica.';
-                            positionImage = 'https://i.ytimg.com/vi/o0VQoEvPzGk/maxresdefault.jpg';
-                            positionCaption = 'Jamie George, Inghilterra';
-                        } else if (altezza > 180 && altezza <= 195) {
-                            positionInfo = '🏉 **Mediano d\'Apertura (Fly-half)**: Con la tua altezza e visione di gioco, sarai il cervello della squadra. Gestirai l\'attacco e guiderai le strategie con abilità e decisione.';
-                            positionImage = 'https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2021/02/GettyImages-1246850807-scaled.jpg';
-                            positionCaption = 'Finn Russell, Scozia';
-                        } else if (peso <= 100) {
-                            positionInfo = '🏃 **Ala (Wing)**: La tua velocità e agilità ti rendono ideale per l\'ala. Sarai un attaccante rapido, capace di sfondare le difese avversarie.';
-                            positionImage = 'https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2023/08/GettyImages-1251909743-scaled.jpg';
-                            positionCaption = 'Josua Tuisova, Fiji';
-                        } else if (peso <= 90 && altezza <= 180) {
-                            positionInfo = '🏉 **Fullback (Full-back)**: Con la tua abilità di leggere il gioco e la velocità, sarai perfetto per il ruolo di fullback, gestendo la difesa e supportando l’attacco.';
-                            positionImage = 'https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/03/12/3336459-68209448-2560-1440.jpg';
-                            positionCaption = 'Ange Capuozzo, Italia';
-                        } else {
-                            positionInfo = '🏅 **Posizione Generica**: La tua combinazione di altezza e peso potrebbe adattarsi bene a diversi ruoli. Ti invitiamo a esplorare e trovare quello che meglio si adatta al tuo stile di gioco.';
-                            positionImage = 'https://res.cloudinary.com/ybmedia/image/upload/c_crop,h_646,w_1151,x_268,y_40/c_fill,f_auto,h_1215,q_auto,w_2160/v1/m/e/9/e9322aa58c80752649e36083d3310bc707e515f5/antoine-dupont-adds-career-rugby-sevens-gold-medal.jpg';
-                            positionCaption = 'Antoine Dupont, Francia';
-                        }
-                    } else { // Sesso femminile
-                        if (altezza > 180) {
-                            positionInfo = '🏉 **Seconda Linea (Lock)**: La tua altezza ti rende un candidato ideale per la seconda linea, eccellendo nelle palle alte e nelle mischie, e dominando il campo con la tua presenza imponente.';
-                            positionImage = 'https://prodcdn.sporty.co.nz/cms/14254/newsarticles/91401_wo.jpg';
-                            positionCaption = 'Charmaine Smith, Nuova Zelanda';
-                        } else if (peso > 97) {
-                            positionInfo = '💪 **Pilone (Prop)**: Il tuo peso elevato ti qualifica per il ruolo di pilone. Sarai un punto di forza nella mischia, assicurando stabilità e forza nei momenti cruciali.';
-                            positionImage = 'https://s.yimg.com/ny/api/res/1.2/CF2H98dGoFJVXcjpvhcP9g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en/aol_gannett_aggregated_707/e02a0f97bdeb9b38948367bd2c366288';
-                            positionCaption = 'Ilona Maher, USA';
-                        } else if (altezza < 155) {
-                            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con la tua altezza inferiore alla media, il ruolo di mediano di mischia è perfetto per te, con agilità e capacità di comando sul campo.';
-                            positionImage = 'https://d19fc3vd0ojo3m.cloudfront.net/irfu/wp-content/uploads/2022/03/07123739/inpho_01967871.jpg';
-                            positionCaption = 'Kathryne Dane, Irlanda';
-                        } else if (altezza > 180) {
-                            positionInfo = '🏉 **Tallonatore (Hooker)**: La tua altezza ti rende un ottimo candidato per il ruolo di tallonatore, essenziale nelle mischie e nelle touche.';
-                            positionImage = 'https://images.ctfassets.net/uiu4umqyl5b5/42qgNRultXpipwpwtJ3rDI/1f411cb08528785be5f4a91fbf8ef47f/Lark_Atkin-Davies.jpg';
-                            positionCaption = 'Lark Atkin-Davies, Inghilterra';
-                        } else if (altezza > 155 && altezza <= 180) {
-                            positionInfo = '🏉 **Mediano d\'Apertura (Fly-half)**: Con la tua altezza, sarai in grado di gestire il gioco con intelligenza e decisione, ottimo per orchestrare l\'attacco.';
-                            positionImage = 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Pauline_Bourdon_Parma_2023.jpg';
-                            positionCaption = 'Pauline Boourdon, Francia';
-                        } else if (peso <= 85) {
-                            positionInfo = '🏃 **Ala (Wing)**: La tua agilità e velocità ti rendono ideale per l\'ala, capace di sfondare le difese avversarie con le tue accelerazioni.';
-                            positionImage = 'https://media.cnn.com/api/v1/images/stellar/prod/160126172919-portia-woodman-sevens-no-stopping-her.jpg?q=w_2298,h_1467,x_0,y_0,c_fill';
-                            positionCaption = 'Portia Woodman, Nuova Zelanda';
-                        } else if (peso <= 72 && altezza <= 175) {
-                            positionInfo = '🏉 **Fullback (Full-back)**: Sarai il giocatore che legge il gioco e gestisce la difesa e l’attacco, con ottime capacità di copertura.';
-                            positionImage = 'https://images.ctfassets.net/r21395x2xyi6/4IMoxLIg6uULuslaWQhF7p/578b3859757ca6021d990371d58d537e/JMP_Harlequins_Women_v_Wasps_Women_RS_195.JPG?fit=thumb&q=80&fl=progressive&w=490&h=490';
-                            positionCaption = 'Ellie Kildunne, Inghilterra';
-                        } else {
-                            positionInfo = '🏅 **Posizione Generica**: La tua combinazione di altezza e peso ti potrebbe adattare a diverse posizioni. Scopri quale ruolo ti entusiasma di più e inizia a giocare!';
-                            positionImage = 'https://lh3.googleusercontent.com/proxy/fCxCym22JLzHOIiq_M0rqGN-wJRD34m3pJsdVHeDW4sduWTFUrMzsXTZueafH97hKSYFgUnoAZQYXtV0cNlt6f6TiH3Ta_c6Az88n907l4Q6Xu9G7p3EPdbqdD__tsMM4sKznt5BM4JmW8_QY3zvVi61F9eTvw';
-                            positionCaption = 'Alev Kelter, USA';
-                        }
-                    }
-                } else { // Minorenni
-                    if (sesso === 'maschio') {
-                        if (altezza > 190) {
-                            positionInfo = '🏉 **Seconda Linea (Lock)**: La tua altezza ti rende un candidato ideale per la seconda linea, eccellendo nelle palle alte e nelle mischie, e dominando il campo con la tua presenza imponente.';
-                            positionImage = 'https://lh3.googleusercontent.com/DMr72tWzQqOtc6fKCyiMzQJGrlEVTGkkk1YaSNpb12ZiCZ2CaMq4EugWXpnau_8Vr8dVmT2ZKrF7dQj1SkGV';
-                            positionCaption = 'Eben Etzebeth, Sudafrica';
-                        } else if (peso > 100) {
-                            positionInfo = '💪 **Pilone (Prop)**: Il tuo peso elevato ti qualifica per il ruolo di pilone. Sarai un punto di forza nella mischia, assicurando stabilità e forza nei momenti cruciali.';
-                            positionImage = 'https://focus.belfasttelegraph.co.uk/thumbor/Pip1f0pYTJf8a9hbwfThyUwFKPw=/0x17:3150x1754/960x640/prod-mh-ireland/e1fca0fe-9723-11ed-8189-0210609a3fe2';
-                            positionCaption = 'Tadhg Furlong, Irlanda';
-                        } else if (altezza < 164) {
-                            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con la tua altezza inferiore alla media, il ruolo di mediano di mischia è perfetto per te, con agilità e capacità di comando sul campo.';
-                            positionImage = 'https://www.allblacks.com/assets/Uploads/h_00091547.jpg';
-                            positionCaption = 'Faf de Klerk, Sudafrica';
-                        } else if (altezza > 180) {
-                            positionInfo = '🏉 **Tallonatore (Hooker)**: La tua altezza ti rende un ottimo candidato per il ruolo di tallonatore, essenziale nelle mischie e nelle touche.';
-                            positionImage = 'https://i.ytimg.com/vi/o0VQoEvPzGk/maxresdefault.jpg';
-                            positionCaption = 'Jamie George, Inghilterra';
-                        } else if (altezza > 155 && altezza <= 180) {
-                            positionInfo = '🏉 **Mediano d\'Apertura (Fly-half)**: Con la tua altezza, sarai in grado di gestire il gioco con intelligenza e decisione, ottimo per orchestrare l\'attacco.';
-                            positionImage = 'https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2021/02/GettyImages-1246850807-scaled.jpg';
-                            positionCaption = 'Finn Russell, Scozia';
-                        } else if (peso <= 85) {
-                            positionInfo = '🏃 **Ala (Wing)**: La tua agilità e velocità ti rendono ideale per l\'ala, capace di sfondare le difese avversarie con le tue accelerazioni.';
-                            positionImage = 'https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2023/08/GettyImages-1251909743-scaled.jpg';
-                            positionCaption = 'Josua Tuisova, Fiji';
-                        } else if (peso <= 72 && altezza <= 175) {
-                            positionInfo = '🏉 **Fullback (Full-back)**: Sarai il giocatore che legge il gioco e gestisce la difesa e l’attacco, con ottime capacità di copertura.';
-                            positionImage = 'https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/03/12/3336459-68209448-2560-1440.jpg';
-                            positionCaption = 'Ange Capuozzo, Italia';
-                        } else {
-                            positionInfo = '🏅 **Posizione Generica**: La tua combinazione di altezza e peso ti potrebbe adattare a diverse posizioni. Scopri quale ruolo ti entusiasma di più e inizia a giocare!';
-                            positionImage = 'https://res.cloudinary.com/ybmedia/image/upload/c_crop,h_646,w_1151,x_268,y_40/c_fill,f_auto,h_1215,q_auto,w_2160/v1/m/e/9/e9322aa58c80752649e36083d3310bc707e515f5/antoine-dupont-adds-career-rugby-sevens-gold-medal.jpg';
-                            positionCaption = 'Antoine Dupont, Francia';
-                        }
-                    } else { // Sesso femminile, minorenni
-                        if (altezza > 175) {
-                            positionInfo = '🏉 **Seconda Linea (Lock)**: La tua altezza ti rende un candidato ideale per la seconda linea, eccellendo nelle palle alte e nelle mischie, e dominando il campo con la tua presenza imponente.';
-                            positionImage = 'https://prodcdn.sporty.co.nz/cms/14254/newsarticles/91401_wo.jpg';
-                            positionCaption = 'Charmaine Smith, Nuova Zelanda';
-                        } else if (peso > 85) {
-                            positionInfo = '💪 **Pilone (Prop)**: Il tuo peso elevato ti qualifica per il ruolo di pilone. Sarai un punto di forza nella mischia, assicurando stabilità e forza nei momenti cruciali.';
-                            positionImage = 'https://s.yimg.com/ny/api/res/1.2/CF2H98dGoFJVXcjpvhcP9g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en/aol_gannett_aggregated_707/e02a0f97bdeb9b38948367bd2c366288';
-                            positionCaption = 'Ilona Maher, USA';
-                        } else if (altezza < 140) {
-                            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con la tua altezza inferiore alla media, il ruolo di mediano di mischia è perfetto per te, con agilità e capacità di comando sul campo.';
-                            positionImage = 'https://d19fc3vd0ojo3m.cloudfront.net/irfu/wp-content/uploads/2022/03/07123739/inpho_01967871.jpg';
-                            positionCaption = 'Kathryne Dane, Irlanda';
-                        } else if (altezza > 180) {
-                            positionInfo = '🏉 **Tallonatore (Hooker)**: La tua altezza ti rende un ottimo candidato per il ruolo di tallonatore, essenziale nelle mischie e nelle touche.';
-                            positionImage = 'https://images.ctfassets.net/uiu4umqyl5b5/42qgNRultXpipwpwtJ3rDI/1f411cb08528785be5f4a91fbf8ef47f/Lark_Atkin-Davies.jpg';
-                            positionCaption = 'Lark Atkin-Davies, Inghilterra';
-                        } else if (altezza > 155 && altezza <= 180) {
-                            positionInfo = '🏉 **Mediano d\'Apertura (Fly-half)**: Con la tua altezza, sarai in grado di gestire il gioco con intelligenza e decisione, ottimo per orchestrare l\'attacco.';
-                            positionImage = 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Pauline_Bourdon_Parma_2023.jpg';
-                            positionCaption = 'Pauline Boourdon, Francia';
-                        } else if (peso <= 85) {
-                            positionInfo = '🏃 **Ala (Wing)**: La tua agilità e velocità ti rendono ideale per l\'ala, capace di sfondare le difese avversarie con le tue accelerazioni.';
-                            positionImage = 'https://media.cnn.com/api/v1/images/stellar/prod/160126172919-portia-woodman-sevens-no-stopping-her.jpg?q=w_2298,h_1467,x_0,y_0,c_fill';
-                            positionCaption = 'Portia Woodman, Nuova Zelanda';
-                        } else if (peso <= 72 && altezza <= 175) {
-                            positionInfo = '🏉 **Fullback (Full-back)**: Sarai il giocatore che legge il gioco e gestisce la difesa e l’attacco, con ottime capacità di copertura.';
-                            positionImage = 'https://images.ctfassets.net/r21395x2xyi6/4IMoxLIg6uULuslaWQhF7p/578b3859757ca6021d990371d58d537e/JMP_Harlequins_Women_v_Wasps_Women_RS_195.JPG?fit=thumb&q=80&fl=progressive&w=490&h=490';
-                            positionCaption = 'Ellie Kildunne, Inghilterra';
-                        } else {
-                            positionInfo = '🏅 **Posizione Generica**: La tua combinazione di altezza e peso ti potrebbe adattare a diverse posizioni. Scopri quale ruolo ti entusiasma di più e inizia a giocare!';
-                            positionImage = 'https://lh3.googleusercontent.com/proxy/fCxCym22JLzHOIiq_M0rqGN-wJRD34m3pJsdVHeDW4sduWTFUrMzsXTZueafH97hKSYFgUnoAZQYXtV0cNlt6f6TiH3Ta_c6Az88n907l4Q6Xu9G7p3EPdbqdD__tsMM4sKznt5BM4JmW8_QY3zvVi61F9eTvw';
-                            positionCaption = 'Alev Kelter, USA';
-                        }
-                    }
-                }
+if (eta >= 18) {
+    if (sesso === 'maschio') {
+        if (altezza > 195) {
+            positionInfo = '🏉 **Seconda Linea (Lock)**: La tua altezza imponente ti rende perfetto per la seconda linea. Sarai il colosso della squadra, eccellendo nei salti e nelle mischie, con un impatto dominante in campo.';
+            positionImage = 'https://lh3.googleusercontent.com/DMr72tWzQqOtc6fKCyiMzQJGrlEVTGkkk1YaSNpb12ZiCZ2CaMq4EugWXpnau_8Vr8dVmT2ZKrF7dQj1SkGV';
+            positionCaption = 'Eben Etzebeth, Sudafrica';
+        } else if (peso > 110) {
+            positionInfo = '💪 **Pilone (Prop)**: La tua forza e corporatura ti rendono ideale per il ruolo di pilone. Sarai un pilastro della mischia, garantendo stabilità e potenza a ogni scrimmage.';
+            positionImage = 'https://focus.belfasttelegraph.co.uk/thumbor/Pip1f0pYTJf8a9hbwfThyUwFKPw=/0x17:3150x1754/960x640/prod-mh-ireland/e1fca0fe-9723-11ed-8189-0210609a3fe2';
+            positionCaption = 'Tadhg Furlong, Irlanda';
+        } else if (altezza < 175 && peso < 78) {
+            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con la tua altezza inferiore alla media, il ruolo di mediano di mischia è perfetto per te. Sarai agile e veloce, gestendo il gioco con intelligenza e precisione.';
+            positionImage = 'https://www.allblacks.com/assets/Uploads/h_00091547.jpg';
+            positionCaption = 'Faf de Klerk, Sudafrica';
+        } else if (altezza >= 173 && altezza <= 183 && peso >= 85 && peso < 110) {
+            positionInfo = '🏉 **Tallonatore (Hooker)**: La tua altezza ti rende perfetto per il ruolo di tallonatore. Sarai fondamentale nelle mischie e nelle touche, mostrando forza e tecnica.';
+            positionImage = 'https://i.ytimg.com/vi/o0VQoEvPzGk/maxresdefault.jpg';
+            positionCaption = 'Jamie George, Inghilterra';
+        } else if (altezza > 180 e altezza <= 195 e peso > 65 e peso <= 90) {
+            positionInfo = '🏉 **Mediano d\'Apertura (Fly-half)**: Con la tua altezza e visione di gioco, sarai il cervello della squadra. Gestirai l\'attacco e guiderai le strategie con abilità e decisione.';
+            positionImage = 'https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2021/02/GettyImages-1246850807-scaled.jpg';
+            positionCaption = 'Finn Russell, Scozia';
+        } else if (peso <= 80 e peso >= 60 e altezza < 180) {
+            positionInfo = '🏃 **Ala (Wing)**: La tua velocità e agilità ti rendono ideale per l\'ala. Sarai un attaccante rapido, capace di sfondare le difese avversarie.';
+            positionImage = 'https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2023/08/GettyImages-1251909743-scaled.jpg';
+            positionCaption = 'Josua Tuisova, Fiji';
+        } else if (peso <= 90 e altezza <= 193 e altezza >= 178) {
+            positionInfo = '🏉 **Fullback (Full-back)**: Con la tua abilità di leggere il gioco e la velocità, sarai perfetto per il ruolo di fullback, gestendo la difesa e supportando l’attacco.';
+            positionImage = 'https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/03/12/3336459-68209448-2560-1440.jpg';
+            positionCaption = 'Ange Capuozzo, Italia';
+        } else {
+            positionInfo = '🏅 **Posizione Generica**: La tua combinazione di altezza e peso potrebbe adattarsi bene a diversi ruoli. Ti invitiamo a esplorare e trovare quello che meglio si adatta al tuo stile di gioco.';
+            positionImage = 'https://res.cloudinary.com/ybmedia/image/upload/c_crop,h_646,w_1151,x_268,y_40/c_fill,f_auto,h_1215,q_auto,w_2160/v1/m/e/9/e9322aa58c80752649e36083d3310bc707e515f5/antoine-dupont-adds-career-rugby-sevens-gold-medal.jpg';
+            positionCaption = 'Antoine Dupont, Francia';
+        }
+    } else { // Sesso femminile
+        if (altezza > 180) {
+            positionInfo = '🏉 **Seconda Linea (Lock)**: La tua altezza ti rende un candidato ideale per la seconda linea, eccellendo nelle palle alte e nelle mischie, e dominando il campo con la tua presenza imponente.';
+            positionImage = 'https://prodcdn.sporty.co.nz/cms/14254/newsarticles/91401_wo.jpg';
+            positionCaption = 'Charmaine Smith, Nuova Zelanda';
+        } else if (peso >= 95) {
+            positionInfo = '💪 **Pilone (Prop)**: Il tuo peso elevato ti qualifica per il ruolo di pilone. Sarai un punto di forza nella mischia, assicurando stabilità e forza nei momenti cruciali.';
+            positionImage = 'https://s.yimg.com/ny/api/res/1.2/CF2H98dGoFJVXcjpvhcP9g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en/aol_gannett_aggregated_707/e02a0f97bdeb9b38948367bd2c366288';
+            positionCaption = 'Ilona Maher, USA';
+        } else if (altezza < 162 e peso <= 55) {
+            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con la tua altezza inferiore alla media, il ruolo di mediano di mischia è perfetto per te, con agilità e capacità di comando sul campo.';
+            positionImage = 'https://d19fc3vd0ojo3m.cloudfront.net/irfu/wp-content/uploads/2022/03/07123739/inpho_01967871.jpg';
+            positionCaption = 'Kathryne Dane, Irlanda';
+        } else if (altezza >= 160 e altezza <= 170 e peso >= 72 e peso < 95) {
+            positionInfo = '🏉 **Tallonatore (Hooker)**: La tua altezza ti rende un ottimo candidato per il ruolo di tallonatore, essenziale nelle mischie e nelle touche.';
+            positionImage = 'https://images.ctfassets.net/uiu4umqyl5b5/42qgNRultXpipwpwtJ3rDI/1f411cb08528785be5f4a91fbf8ef47f/Lark_Atkin-Davies.jpg';
+            positionCaption = 'Lark Atkin-Davies, Inghilterra';
+        } else if (altezza > 162 e altezza <= 178 e peso > 55 e peso <= 75) {
+            positionInfo = '🏉 **Mediano d\'Apertura (Fly-half)**: Con la tua altezza e la tua solida stazza, sarai in grado di gestire il gioco con intelligenza e decisione, ottimo per orchestrare l\'attacco.';
+            positionImage = 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Pauline_Bourdon_Parma_2023.jpg';
+            positionCaption = 'Pauline Boourdon, Francia';
+        } else if (peso < 75 e peso >= 45 e altezza < 178 e altezza >= 162) {
+            positionInfo = '🏃 **Ala (Wing)**: La tua agilità e velocità ti rendono ideale per l\'ala, capace di sfondare le difese avversarie con le tue accelerazioni.';
+            positionImage = 'https://media.cnn.com/api/v1/images/stellar/prod/160126172919-portia-woodman-sevens-no-stopping-her.jpg?q=w_2298,h_1293,x_0,y_0,c_fill/w_1280';
+            positionCaption = 'Portia Woodman, Nuova Zelanda';
+        } else if (peso < 80 e altezza <= 183 e altezza >= 170) {
+            positionInfo = '🏉 **Fullback (Full-back)**: La tua altezza e peso ti rendono ideale per il ruolo di fullback, gestendo la difesa e supportando l\'attacco.';
+            positionImage = 'https://images.ctfassets.net/r21395x2xyi6/4IMoxLIg6uULuslaWQhF7p/578b3859757ca6021d990371d58d537e/JMP_Harlequins_Women_v_Wasps_Women_RS_195.JPG?fit=thumb&q=80&fl=progressive&w=490&h=490';
+            positionCaption = 'Ellie Kildunne, Inghilterra';
+        } else {
+            positionInfo = '🏅 **Posizione Generica**: La tua combinazione di altezza e peso potrebbe adattarsi bene a diversi ruoli. Ti invitiamo a esplorare e trovare quello che meglio si adatta al tuo stile di gioco.';
+            positionImage = 'https://lh3.googleusercontent.com/proxy/fCxCym22JLzHOIiq_M0rqGN-wJRD34m3pJsdVHeDW4sduWTFUrMzsXTZueafH97hKSYFgUnoAZQYXtV0cNlt6f6TiH3Ta_c6Az88n907l4Q6Xu9G7p3EPdbqdD__tsMM4sKznt5BM4JmW8_QY3zvVi61F9eTvw';
+            positionCaption = 'Alev Kelter, USA';
+        }
+    }
+} else { // Minorenni
+    if (sesso === 'maschio') {
+        if (altezza > 188) {
+            positionInfo = '🏉 **Seconda Linea (Lock)**: La tua altezza imponente ti rende perfetto per la seconda linea. Sarai il colosso della squadra, eccellendo nei salti e nelle mischie, con un impatto dominante in campo.';
+            positionImage = 'https://lh3.googleusercontent.com/DMr72tWzQqOtc6fKCyiMzQJGrlEVTGkkk1YaSNpb12ZiCZ2CaMq4EugWXpnau_8Vr8dVmT2ZKrF7dQj1SkGV';
+            positionCaption = 'Eben Etzebeth, Sudafrica';
+        } else if (peso > 103) {
+            positionInfo = '💪 **Pilone (Prop)**: La tua forza e corporatura ti rendono ideale per il ruolo di pilone. Sarai un pilastro della mischia, garantendo stabilità e potenza a ogni scrimmage.';
+            positionImage = 'https://focus.belfasttelegraph.co.uk/thumbor/Pip1f0pYTJf8a9hbwfThyUwFKPw=/0x17:3150x1754/960x640/prod-mh-ireland/e1fca0fe-9723-11ed-8189-0210609a3fe2';
+            positionCaption = 'Tadhg Furlong, Irlanda';
+        } else if (altezza < 168 && peso < 71) {
+            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con la tua altezza inferiore alla media, il ruolo di mediano di mischia è perfetto per te. Sarai agile e veloce, gestendo il gioco con intelligenza e precisione.';
+            positionImage = 'https://www.allblacks.com/assets/Uploads/h_00091547.jpg';
+            positionCaption = 'Faf de Klerk, Sudafrica';
+        } else if (altezza >= 166 && altezza <= 176 && peso >= 78 && peso < 103) {
+            positionInfo = '🏉 **Tallonatore (Hooker)**: La tua altezza ti rende perfetto per il ruolo di tallonatore. Sarai fondamentale nelle mischie e nelle touche, mostrando forza e tecnica.';
+            positionImage = 'https://i.ytimg.com/vi/o0VQoEvPzGk/maxresdefault.jpg';
+            positionCaption = 'Jamie George, Inghilterra';
+        } else if (altezza > 173 && altezza <= 188 e peso > 58 e peso <= 83) {
+            positionInfo = '🏉 **Mediano d\'Apertura (Fly-half)**: Con la tua altezza e visione di gioco, sarai il cervello della squadra. Gestirai l\'attacco e guiderai le strategie con abilità e decisione.';
+            positionImage = 'https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2021/02/GettyImages-1246850807-scaled.jpg';
+            positionCaption = 'Finn Russell, Scozia';
+        } else if (peso <= 73 e peso >= 53 e altezza < 173) {
+            positionInfo = '🏃 **Ala (Wing)**: La tua velocità e agilità ti rendono ideale per l\'ala. Sarai un attaccante rapido, capace di sfondare le difese avversarie.';
+            positionImage = 'https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2023/08/GettyImages-1251909743-scaled.jpg';
+            positionCaption = 'Josua Tuisova, Fiji';
+        } else if (peso <= 83 e altezza <= 186 e altezza >= 171) {
+            positionInfo = '🏉 **Fullback (Full-back)**: Con la tua abilità di leggere il gioco e la velocità, sarai perfetto per il ruolo di fullback, gestendo la difesa e supportando l’attacco.';
+            positionImage = 'https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/03/12/3336459-68209448-2560-1440.jpg';
+            positionCaption = 'Ange Capuozzo, Italia';
+        } else {
+            positionInfo = '🏅 **Posizione Generica**: La tua combinazione di altezza e peso potrebbe adattarsi bene a diversi ruoli. Ti invitiamo a esplorare e trovare quello che meglio si adatta al tuo stile di gioco.';
+            positionImage = 'https://res.cloudinary.com/ybmedia/image/upload/c_crop,h_646,w_1151,x_268,y_40/c_fill,f_auto,h_1215,q_auto,w_2160/v1/m/e/9/e9322aa58c80752649e36083d3310bc707e515f5/antoine-dupont-adds-career-rugby-sevens-gold-medal.jpg';
+            positionCaption = 'Antoine Dupont, Francia';
+        }
+    } else { // Sesso femminile
+        if (altezza > 173) {
+            positionInfo = '🏉 **Seconda Linea (Lock)**: La tua altezza ti rende un candidato ideale per la seconda linea, eccellendo nelle palle alte e nelle mischie, e dominando il campo con la tua presenza imponente.';
+            positionImage = 'https://prodcdn.sporty.co.nz/cms/14254/newsarticles/91401_wo.jpg';
+            positionCaption = 'Charmaine Smith, Nuova Zelanda';
+        } else if (peso >= 88) {
+            positionInfo = '💪 **Pilone (Prop)**: Il tuo peso elevato ti qualifica per il ruolo di pilone. Sarai un punto di forza nella mischia, assicurando stabilità e forza nei momenti cruciali.';
+            positionImage = 'https://s.yimg.com/ny/api/res/1.2/CF2H98dGoFJVXcjpvhcP9g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en/aol_gannett_aggregated_707/e02a0f97bdeb9b38948367bd2c366288';
+            positionCaption = 'Ilona Maher, USA';
+        } else if (altezza < 155 e peso <= 48) {
+            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con la tua altezza inferiore alla media, il ruolo di mediano di mischia è perfetto per te, con agilità e capacità di comando sul campo.';
+            positionImage = 'https://d19fc3vd0ojo3m.cloudfront.net/irfu/wp-content/uploads/2022/03/07123739/inpho_01967871.jpg';
+            positionCaption = 'Kathryne Dane, Irlanda';
+        } else if (altezza >= 153 e altezza <= 163 e peso >= 65 e peso < 88) {
+            positionInfo = '🏉 **Tallonatore (Hooker)**: La tua altezza ti rende un ottimo candidato per il ruolo di tallonatore, essenziale nelle mischie e nelle touche.';
+            positionImage = 'https://images.ctfassets.net/uiu4umqyl5b5/42qgNRultXpipwpwtJ3rDI/1f411cb08528785be5f4a91fbf8ef47f/Lark_Atkin-Davies.jpg';
+            positionCaption = 'Lark Atkin-Davies, Inghilterra';
+        } else if (altezza > 158 e altezza <= 173 e peso > 48 e peso <= 66) {
+            positionInfo = '🏉 **Mediano d\'Apertura (Fly-half)**: Con la tua altezza e visione di gioco, il ruolo di mediano d\'apertura è ideale per te, guidando l\'attacco e prendendo decisioni strategiche.';
+            positionImage = 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Pauline_Bourdon_Parma_2023.jpg';
+            positionCaption = 'Pauline Boourdon, Francia';
+        } else if (peso <= 64 e altezza <= 168 e altezza >= 150) {
+            positionInfo = '🏃 **Ala (Wing)**: La tua velocità e agilità ti rendono ideale per l\'ala, sfruttando la tua capacità di sfuggire alla difesa avversaria e segnare mete.';
+            positionImage = 'https://www.skysports.com/images/skysports/2401445.jpg';
+            positionCaption = 'Portia Woodman, Nuova Zelanda';
+        } else if (peso < 80 e altezza <= 183 e altezza >= 170) {
+            positionInfo = '🏉 **Fullback (Full-back)**: La tua altezza e peso ti rendono ideale per il ruolo di fullback, gestendo la difesa e supportando l\'attacco.';
+            positionImage = 'https://images.ctfassets.net/r21395x2xyi6/4IMoxLIg6uULuslaWQhF7p/578b3859757ca6021d990371d58d537e/JMP_Harlequins_Women_v_Wasps_Women_RS_195.JPG?fit=thumb&q=80&fl=progressive&w=490&h=490';
+            positionCaption = 'Ellie Kildunne, Inghilterra';
+        } else {
+            positionInfo = '🏅 **Posizione Generica**: La tua combinazione di altezza e peso potrebbe adattarsi bene a diversi ruoli. Ti invitiamo a esplorare e trovare quello che meglio si adatta al tuo stile di gioco.';
+            positionImage = 'https://lh3.googleusercontent.com/proxy/fCxCym22JLzHOIiq_M0rqGN-wJRD34m3pJsdVHeDW4sduWTFUrMzsXTZueafH97hKSYFgUnoAZQYXtV0cNlt6f6TiH3Ta_c6Az88n907l4Q6Xu9G7p3EPdbqdD__tsMM4sKznt5BM4JmW8_QY3zvVi61F9eTvw';
+            positionCaption = 'Alev Kelter, USA';
+        }
+    }
+}
+
 
                 document.getElementById('position-info').innerText = positionInfo;
                 document.getElementById('position-info').style.display = 'block';
