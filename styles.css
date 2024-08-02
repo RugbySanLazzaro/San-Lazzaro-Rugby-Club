@@ -1,14 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.6;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 header .container {
@@ -17,15 +18,10 @@ header .container {
     align-items: center;
 }
 
-header .logo {
-    height: 80px; /* Modifica l'altezza del logo a tuo piacimento */
-    width: auto; /* Mantiene le proporzioni del logo */
-}
-
 header h1 {
     margin: 0;
     padding: 0 20px;
-    white-space: nowrap; /* Impedisce al testo di andare a capo */
+    font-size: 2.5em;
 }
 
 header nav ul {
@@ -42,10 +38,11 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.1em;
 }
 
 main {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .container {
@@ -56,21 +53,20 @@ main {
 
 section {
     margin: 40px 0;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
 }
 
 h2 {
     color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 p {
     color: #666;
-}
-
-small {
-    display: block;
-    color: #999;
-    font-size: 0.8em;
-    margin-bottom: 5px;
+    font-size: 1.2em;
 }
 
 .cta-button {
@@ -80,30 +76,42 @@ small {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 1.2em;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 footer p {
     margin: 0;
+    font-size: 1em;
 }
 
-/* Layout a tre colonne */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+}
+
 .three-column {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
-.three-column .column {
-    flex: 1;
-    margin: 0 10px;
+small {
+    display: block;
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 5px;
 }
 
-.three-column .column p {
-    margin-top: 0;
-}
