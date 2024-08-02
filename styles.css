@@ -18,14 +18,14 @@ header .container {
 }
 
 header .logo {
-    height: 50px; /* Imposta l'altezza del logo */
-    width: auto; /* Mantieni le proporzioni */
+    height: 80px; /* Modifica l'altezza del logo a tuo piacimento */
+    width: auto; /* Mantiene le proporzioni del logo */
 }
 
 header h1 {
     margin: 0;
     padding: 0 20px;
-    flex: 1; /* Consente al titolo di occupare lo spazio disponibile */
+    white-space: nowrap; /* Impedisce al testo di andare a capo */
 }
 
 header nav ul {
