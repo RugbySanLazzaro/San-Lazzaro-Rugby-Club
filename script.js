@@ -1,5 +1,5 @@
 // Per ora non c'è bisogno di molto JavaScript, ma questo file può essere utilizzato per funzioni future
-console.log("Sito Rugby Club [Nome Città] Caricato");
+console.log("Sito San Lazzaro Rugby Caricato");
 document.addEventListener("DOMContentLoaded", function() {
     var dateElements = document.querySelectorAll(".date");
     var today = new Date();
