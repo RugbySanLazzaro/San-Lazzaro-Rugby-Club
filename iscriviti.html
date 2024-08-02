@@ -6,6 +6,15 @@
     <title>Iscriviti - San Lazzaro Rugby Club</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .position-info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -34,7 +43,7 @@
             <div class="container">
                 <h2>Iscriviti</h2>
                 <p>Compila il modulo sottostante per diventare un membro del San Lazzaro Rugby Club.</p>
-                <form action="https://formspree.io/f/xeojgrdv" method="POST">
+                <form id="signup-form" action="https://formspree.io/f/YOURLONGFORMID" method="POST">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
 
@@ -51,11 +60,18 @@
                     <label for="eta">Età:</label>
                     <input type="number" id="eta" name="eta" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" name="peso">
+
+                    <label for="altezza">Altezza (cm):</label>
+                    <input type="number" id="altezza" name="altezza">
+
+                    <p>Opzionale: Se vuoi conoscere la posizione più adatta a te, compila anche i seguenti campi.</p>
 
                     <button type="submit">Invia</button>
+                    <button type="button" id="show-position">Mostra la mia posizione</button>
                 </form>
+                <div id="position-info" class="position-info" style="display: none;"></div>
             </div>
         </section>
     </main>
@@ -66,6 +82,44 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('show-position').addEventListener('click', function() {
+            var eta = parseInt(document.getElementById('eta').value);
+            var sesso = document.getElementById('sesso').value;
+            var peso = parseFloat(document.getElementById('peso').value);
+            var altezza = parseFloat(document.getElementById('altezza').value);
+
+            var positionInfo = '';
+
+            if (eta >= 18) {
+                if (sesso === 'maschio') {
+                    if (peso > 100 && altezza >= 180) {
+                        positionInfo = 'Sei dotato di forza e resistenza, quindi potresti essere un ottimo pilone. I piloni sono i giocatori che si occupano di garantire la stabilità nella mischia e hanno un ruolo cruciale nella difesa e negli attacchi. La tua forza fisica e la tua capacità di mantenere la posizione sotto pressione ti rendono perfetto per questo ruolo.';
+                    } else if (peso > 85 && altezza >= 175 && altezza <= 185) {
+                        positionInfo = 'Sei un potenziale apertura. Gli aperturisti sono responsabili di dare il via al gioco e gestire le strategie durante la partita. La tua altezza e il tuo peso ti conferiscono una buona visione di gioco e stabilità.';
+                    } else if (peso > 90 && altezza >= 185) {
+                        positionInfo = 'Potresti essere una seconda linea. I secondi linee sono essenziali nelle mischie e nelle line-out, e la tua statura ti fornisce un vantaggio nelle situazioni di contatto e nelle palle alte.';
+                    } else if (peso <= 85 && altezza >= 170) {
+                        positionInfo = 'Sei un eccellente terza linea. Le terze linee sono molto agili e forti, e giocano un ruolo importante sia in attacco che in difesa, spesso diventando protagonisti nei breakdown e nelle azioni di contatto.';
+                    } else {
+                        positionInfo = 'La tua combinazione di peso e altezza è adatta per vari ruoli. Ti incoraggio a provare diverse posizioni e scoprire quale ti piace di più!';
+                    }
+                } else if (sesso === 'femmina') {
+                    if (peso > 70 && altezza >= 170 && altezza <= 180) {
+                        positionInfo = 'Potresti essere una seconda linea. Le seconde linee sono essenziali nelle mischie e nelle line-out, e la tua statura ti fornisce un vantaggio nelle situazioni di contatto e nelle palle alte.';
+                    } else if (peso > 65 && altezza >= 160 && altezza <= 170) {
+                        positionInfo = 'Sei una potenziale apertura. Gli aperturisti sono responsabili di gestire il gioco e organizzare le strategie durante la partita. La tua altezza e il tuo peso ti conferiscono una buona visione di gioco e capacità di decisione.';
+                    } else {
+                        positionInfo = 'La tua combinazione di peso e altezza è adatta per vari ruoli. Ti incoraggio a provare diverse posizioni e scoprire quale ti piace di più!';
+                    }
+                }
+            } else {
+                positionInfo = 'Per la tua età, potresti essere un giovane che sta scoprendo il rugby. Ti incoraggio a provare vari ruoli e scoprire quale ti piace di più!';
+            }
+
+            document.getElementById('position-info').innerText = positionInfo;
+            document.getElementById('position-info').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
