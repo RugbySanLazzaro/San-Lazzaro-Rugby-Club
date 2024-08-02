@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iscriviti - San Lazzaro Rugby Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="San Lazzaro Rugby Club Logo" class="logo">
+            <h1>San Lazzaro Rugby Club</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="allenamenti.html">Allenamenti</a></li>
+                    <li><a href="partite-eventi.html">Partite ed Eventi</a></li>
+                    <li><a href="iscriviti.html">Iscriviti</a></li>
+                    <li><a href="galleria.html">Galleria</a></li>
+                    <li><a href="notizie-blog.html">Notizie e Blog</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="sponsorizzazioni.html">Sponsorizzazioni</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="iscriviti">
+            <div class="container">
+                <h2>Iscriviti</h2>
+                <p>Compila il modulo sottostante per diventare un membro del San Lazzaro Rugby Club.</p>
+                <form action="https://formspree.io/f/xeojgrdv" method="POST">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="cognome">Cognome:</label>
+                    <input type="text" id="cognome" name="cognome" required>
+
+                    <label for="sesso">Sesso:</label>
+                    <select id="sesso" name="sesso" required>
+                        <option value="maschio">Maschio</option>
+                        <option value="femmina">Femmina</option>
+                        <option value="altro">Altro</option>
+                    </select>
+
+                    <label for="eta">Età:</label>
+                    <input type="number" id="eta" name="eta" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <button type="submit">Invia</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 San Lazzaro Rugby Club. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
