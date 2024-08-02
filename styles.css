@@ -17,9 +17,15 @@ header .container {
     align-items: center;
 }
 
+header .logo {
+    height: 50px; /* Imposta l'altezza del logo */
+    width: auto; /* Mantieni le proporzioni */
+}
+
 header h1 {
     margin: 0;
     padding: 0 20px;
+    flex: 1; /* Consente al titolo di occupare lo spazio disponibile */
 }
 
 header nav ul {
@@ -79,3 +85,4 @@ footer {
 footer p {
     margin: 0;
 }
+
