@@ -14,6 +14,16 @@
             border-radius: 5px;
             background-color: #f8f9fa;
         }
+        .optional-fields {
+            margin-top: 20px;
+        }
+        .optional-fields label {
+            display: block;
+            margin-top: 10px;
+        }
+        .form-buttons {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -60,16 +70,20 @@
                     <label for="eta">Età:</label>
                     <input type="number" id="eta" name="eta" required>
 
-                    <label for="peso">Peso (kg):</label>
-                    <input type="number" id="peso" name="peso">
-
-                    <label for="altezza">Altezza (cm):</label>
-                    <input type="number" id="altezza" name="altezza">
-
                     <p>Opzionale: Se vuoi conoscere la posizione più adatta a te, compila anche i seguenti campi.</p>
 
-                    <button type="submit">Invia</button>
-                    <button type="button" id="show-position">Mostra la mia posizione</button>
+                    <div class="optional-fields">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" name="peso">
+
+                        <label for="altezza">Altezza (cm):</label>
+                        <input type="number" id="altezza" name="altezza">
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Invia</button>
+                        <button type="button" id="show-position">Mostra la mia posizione</button>
+                    </div>
                 </form>
                 <div id="position-info" class="position-info" style="display: none;"></div>
             </div>
