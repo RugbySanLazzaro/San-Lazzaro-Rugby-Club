@@ -3,28 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iscriviti - San Lazzaro Rugby Club</title>
+    <title>Iscrizione al San Lazzaro Rugby Club</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        .position-info {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #007BFF;
-            border-radius: 5px;
-            background-color: #f8f9fa;
-        }
-        .optional-fields {
-            margin-top: 20px;
-        }
-        .optional-fields label {
-            display: block;
-            margin-top: 10px;
-        }
-        .form-buttons {
-            margin-top: 20px;
-        }
-    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('show-position').addEventListener('click', function() {
+                var eta = parseInt(document.getElementById('eta').value);
+                var sesso = document.getElementById('sesso').value;
+                var peso = parseFloat(document.getElementById('peso').value) || 0;
+                var altezza = parseFloat(document.getElementById('altezza').value) || 0;
+
+                var positionInfo = '';
+
+                if (eta >= 18) {
+                    if (sesso === 'maschio') {
+                        if (peso > 100 && altezza >= 180) {
+                            positionInfo = '💪 **Pilone (Prop)**: Sei un colosso della forza e della resistenza! Il tuo ruolo sarà quello di garantire stabilità e potenza nella mischia, affrontando i difensori avversari con tenacia. Sei l’eroe invisibile che lavora dietro le quinte per dare alla squadra una base solida!';
+                        } else if (peso > 95 && altezza >= 185) {
+                            positionInfo = '🦁 **Seconda Linea (Lock)**: La tua imponenza fisica ti rende un guardiano delle line-out e delle mischie. Le seconde linee sono i titani della mischia, e il tuo ruolo è cruciale per alzare la squadra nei momenti decisivi. La tua altezza e forza ti danno un vantaggio nei contatti e nelle palle alte.';
+                        } else if (peso > 85 && altezza >= 175 && altezza <= 185) {
+                            positionInfo = '⚡ **Mediano di Apertura (Fly-half)**: La tua altezza e il tuo peso ti rendono un maestro delle strategie! Sei l’architetto del gioco, orchestrando le azioni e guidando la squadra con decisioni rapide e precise. La tua visione e controllo del gioco sono essenziali per il successo della squadra.';
+                        } else if (peso > 80 && altezza >= 175 && altezza <= 185) {
+                            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con una combinazione perfetta di agilità e intelligenza, il mediano di mischia è il regista in campo. La tua funzione è quella di collegare la mischia e il gioco aperto, garantendo fluidità e coesione durante ogni azione.';
+                        } else if (peso <= 85 && altezza >= 170) {
+                            positionInfo = '🔥 **Terza Linea (Back Row)**: Versatilità e dinamismo sono le tue caratteristiche principali. Le terze linee sono le spie del campo, pronte ad intervenire in ogni situazione. Il tuo compito è quello di essere un atleta completo, capace di eccellere tanto in attacco quanto in difesa.';
+                        } else if (peso <= 80 && altezza >= 175) {
+                            positionInfo = '🏃 **Ala (Wing)**: Sei agile e veloce, pronto a sfruttare ogni opportunità per segnare. Gli ali sono i cacciatori della squadra, capaci di correre lungo la fascia e superare gli avversari con rapidità e precisione.';
+                        } else if (peso <= 90 && altezza >= 170) {
+                            positionInfo = '🛡️ **Tallonatore (Hooker)**: Sei l’anima della mischia, il tallonatore lavora instancabilmente per conquistare il pallone e garantire che la squadra ottenga il possesso. La tua abilità nel tallonare e il tuo contributo nelle mischie sono cruciali per ogni fase di gioco.';
+                        } else {
+                            positionInfo = 'La tua combinazione di peso e altezza potrebbe essere adatta a diversi ruoli. Ti incoraggio a provare varie posizioni e scoprire quale ti piace di più!';
+                        }
+                    } else if (sesso === 'femmina') {
+                        if (peso > 70 && altezza >= 170 && altezza <= 180) {
+                            positionInfo = '🦸 **Seconda Linea (Lock)**: La tua statura ti dà un vantaggio nelle mischie e nelle line-out. Le seconde linee sono fondamentali per la stabilità della squadra e per i salti nelle palle alte, il tuo ruolo è quello di essere una presenza dominante in campo.';
+                        } else if (peso > 65 && altezza >= 160 && altezza <= 170) {
+                            positionInfo = '📈 **Mediano di Mischia (Scrum-half)**: La tua agilità e capacità di prendere decisioni ti rendono adatta per il ruolo di mediano di mischia. Sarai il cervello della squadra, guidando il gioco con intelligenza e rapidità.';
+                        } else if (peso <= 65 && altezza >= 160) {
+                            positionInfo = '💨 **Ala (Wing)**: Sei perfetta per il ruolo di ala grazie alla tua velocità e agilità. Gli ali devono essere rapidi e pronti a segnare, sfruttando ogni opportunità.';
+                        } else if (peso <= 70 && altezza >= 160) {
+                            positionInfo = '⚽ **Mediano di Apertura (Fly-half)**: Con il tuo mix di altezza e peso, potresti eccellere come aperturista, gestendo il gioco e le strategie con precisione. Il tuo ruolo è quello di dettare il ritmo della partita e guidare le azioni in campo.';
+                        } else if (peso <= 65 && altezza >= 155) {
+                            positionInfo = '🏃 **Estremo (Full-back)**: La tua agilità e velocità ti rendono perfetta per il ruolo di estremo. Gli estremi devono essere rapidi e sicuri, capaci di coprire il campo e supportare gli attaccanti con abilità.';
+                        } else {
+                            positionInfo = 'La tua combinazione di peso e altezza può essere adatta a diversi ruoli. Ti invitiamo a scoprire quale posizione ti si addice di più!';
+                        }
+                    }
+                } else { // Minorenni
+                    if (sesso === 'maschio') {
+                        if (peso > 70 && altezza >= 170) {
+                            positionInfo = '💪 **Pilone (Prop)**: La tua forza e corporatura sono ideali per un giovane pilone. Anche se sei giovane, hai il potenziale per eccellere nella mischia e giocare un ruolo vitale nella squadra.';
+                        } else if (peso > 65 && altezza >= 160 && altezza < 170) {
+                            positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Sei agile e veloce, il che ti rende un ottimo mediano di mischia. Gestirai il gioco con intelligenza e flessibilità, collegando tutte le fasi della partita.';
+                        } else if (peso <= 60 && altezza >= 160) {
+                            positionInfo = '🏃 **Ala (Wing)**: Con la tua agilità e velocità, sei perfetto per il ruolo di ala. Gli ali giovani devono essere rapidi e pronti a sfruttare ogni opportunità di attacco.';
+                        } else {
+                            positionInfo = 'La tua combinazione di peso e altezza è adatta per vari ruoli. Ti incoraggio a provare diverse posizioni e scoprire quella che meglio si adatta alle tue caratteristiche!';
+                        }
+                    } else if (sesso === 'femmina') {
+                        if (peso > 60 && altezza >= 160) {
+                            positionInfo = '🦸 **Seconda Linea (Lock)**: La tua altezza e peso ti rendono adatta a giocare come seconda linea. Anche se sei giovane, la tua presenza in campo sarà significativa nelle situazioni di mischia e line-out.';
+                        } else if (peso <= 60 && altezza >= 155) {
+                            positionInfo = '📈 **Mediano di Mischia (Scrum-half)**: La tua agilità e capacità di prendere decisioni ti rendono adatta per il ruolo di mediano di mischia. Sarai il cervello della squadra, guidando il gioco con intelligenza e rapidità.';
+                        } else if (peso <= 55 && altezza < 160) {
+                            positionInfo = '💨 **Ala (Wing)**: Sei perfetta per il ruolo di ala grazie alla tua velocità e agilità. Gli ali giovani devono essere rapidi e pronti a segnare, sfruttando ogni opportunità.';
+                        } else {
+                            positionInfo = 'La tua combinazione di peso e altezza può essere adatta a diversi ruoli. Ti invitiamo a scoprire quale posizione ti si addice di più!';
+                        }
+                    }
+                }
+
+                document.getElementById('position-info').innerText = positionInfo;
+                document.getElementById('position-info').style.display = 'block';
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -49,43 +102,38 @@
     </header>
 
     <main>
-        <section id="iscriviti">
+        <section id="iscrizione">
             <div class="container">
-                <h2>Iscriviti</h2>
-                <p>Compila il modulo sottostante per diventare un membro del San Lazzaro Rugby Club.</p>
-                <form id="signup-form" action="https://formspree.io/f/YOURLONGFORMID" method="POST">
+                <h2>Modulo di Iscrizione</h2>
+                <form id="registration-form" action="https://formspree.io/f/xeojgrdv" method="POST">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <input type="text" id="nome" name="nome" required><br>
 
                     <label for="cognome">Cognome:</label>
-                    <input type="text" id="cognome" name="cognome" required>
+                    <input type="text" id="cognome" name="cognome" required><br>
+
+                    <label for="eta">Età:</label>
+                    <input type="number" id="eta" name="eta" required><br>
 
                     <label for="sesso">Sesso:</label>
                     <select id="sesso" name="sesso" required>
                         <option value="maschio">Maschio</option>
                         <option value="femmina">Femmina</option>
-                        <option value="altro">Altro</option>
-                    </select>
-
-                    <label for="eta">Età:</label>
-                    <input type="number" id="eta" name="eta" required>
+                    </select><br>
 
                     <p>Opzionale: Se vuoi conoscere la posizione più adatta a te, compila anche i seguenti campi.</p>
 
-                    <div class="optional-fields">
-                        <label for="peso">Peso (kg):</label>
-                        <input type="number" id="peso" name="peso">
+                    <label for="altezza">Altezza (cm):</label>
+                    <input type="number" id="altezza" name="altezza"><br>
 
-                        <label for="altezza">Altezza (cm):</label>
-                        <input type="number" id="altezza" name="altezza">
-                    </div>
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" name="peso"><br>
 
-                    <div class="form-buttons">
-                        <button type="submit">Invia</button>
-                        <button type="button" id="show-position">Mostra la mia posizione</button>
-                    </div>
+                    <button type="submit">Invia</button>
+                    <button type="button" id="show-position">Mostra la mia posizione</button>
                 </form>
-                <div id="position-info" class="position-info" style="display: none;"></div>
+
+                <div id="position-info" style="display:none; margin-top: 20px; font-weight: bold;"></div>
             </div>
         </section>
     </main>
@@ -95,77 +143,6 @@
             <p>&copy; 2024 San Lazzaro Rugby Club. Tutti i diritti riservati.</p>
         </div>
     </footer>
-
-<script>
-    document.getElementById('show-position').addEventListener('click', function() {
-        var eta = parseInt(document.getElementById('eta').value);
-        var sesso = document.getElementById('sesso').value;
-        var peso = parseFloat(document.getElementById('peso').value) || 0;
-        var altezza = parseFloat(document.getElementById('altezza').value) || 0;
-
-        var positionInfo = '';
-
-        if (eta >= 18) {
-            if (sesso === 'maschio') {
-                if (peso > 100 && altezza >= 180) {
-                    positionInfo = '💪 **Pilone (Prop)**: Sei un colosso della forza e della resistenza! Il tuo ruolo sarà quello di garantire stabilità e potenza nella mischia, affrontando i difensori avversari con tenacia. Sei l’eroe invisibile che lavora dietro le quinte per dare alla squadra una base solida!';
-                } else if (peso > 95 && altezza >= 185) {
-                    positionInfo = '🦁 **Seconda Linea (Lock)**: La tua imponenza fisica ti rende un guardiano delle line-out e delle mischie. Le seconde linee sono i titani della mischia, e il tuo ruolo è cruciale per alzare la squadra nei momenti decisivi. La tua altezza e forza ti danno un vantaggio nei contatti e nelle palle alte.';
-                } else if (peso > 85 && altezza >= 175 && altezza <= 185) {
-                    positionInfo = '⚡ **Mediano di Apertura (Fly-half)**: La tua altezza e il tuo peso ti rendono un maestro delle strategie! Sei l’architetto del gioco, orchestrando le azioni e guidando la squadra con decisioni rapide e precise. La tua visione e controllo del gioco sono essenziali per il successo della squadra.';
-                } else if (peso > 80 && altezza >= 175 && altezza <= 185) {
-                    positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Con una combinazione perfetta di agilità e intelligenza, il mediano di mischia è il regista in campo. La tua funzione è quella di collegare la mischia e il gioco aperto, garantendo fluidità e coesione durante ogni azione.';
-                } else if (peso <= 85 && altezza >= 170) {
-                    positionInfo = '🔥 **Terza Linea (Back Row)**: Versatilità e dinamismo sono le tue caratteristiche principali. Le terze linee sono le spie del campo, pronte ad intervenire in ogni situazione. Il tuo compito è quello di essere un atleta completo, capace di eccellere tanto in attacco quanto in difesa.';
-                } else if (peso <= 80 && altezza >= 175) {
-                    positionInfo = '🏃 **Ala (Wing)**: Sei agile e veloce, pronto a sfruttare ogni opportunità per segnare. Gli ali sono i cacciatori della squadra, capaci di correre lungo la fascia e superare gli avversari con rapidità e precisione.';
-                } else if (peso <= 90 && altezza >= 170) {
-                    positionInfo = '🛡️ **Tallonatore (Hooker)**: Sei l’anima della mischia, il tallonatore lavora instancabilmente per conquistare il pallone e garantire che la squadra ottenga il possesso. La tua abilità nel tallonare e il tuo contributo nelle mischie sono cruciali per ogni fase di gioco.';
-                } else {
-                    positionInfo = 'La tua combinazione di peso e altezza potrebbe essere adatta a diversi ruoli. Ti incoraggio a provare varie posizioni e scoprire quale ti piace di più!';
-                }
-            } else if (sesso === 'femmina') {
-                if (peso > 70 && altezza >= 170 && altezza <= 180) {
-                    positionInfo = '🦸 **Seconda Linea (Lock)**: La tua statura ti dà un vantaggio nelle mischie e nelle line-out. Le seconde linee sono fondamentali per la stabilità della squadra e per i salti nelle palle alte, il tuo ruolo è quello di essere una presenza dominante in campo.';
-                } else if (peso > 65 && altezza >= 160 && altezza <= 170) {
-                    positionInfo = '📈 **Mediano di Mischia (Scrum-half)**: Il tuo peso e altezza ti rendono adatta per dirigere il gioco e orchestrare le azioni con agilità e visione. Il mediano di mischia è il cervello della squadra, e la tua capacità di prendere decisioni rapide è essenziale.';
-                } else if (peso <= 65 && altezza < 160) {
-                    positionInfo = '💨 **Ala (Wing)**: Sei un’estrema velocista, perfetta per gli spazi aperti. Gli ali devono essere agili e capaci di muoversi velocemente lungo il campo, sfruttando ogni opportunità per segnare.';
-                } else if (peso <= 70 && altezza >= 160) {
-                    positionInfo = '⚽ **Mediano di Apertura (Fly-half)**: Con il tuo mix di altezza e peso, potresti eccellere come aperturista, gestendo il gioco e le strategie con precisione. Il tuo ruolo è quello di dettare il ritmo della partita e guidare le azioni in campo.';
-                } else if (peso <= 65 && altezza >= 155) {
-                    positionInfo = '🏃 **Estremo (Full-back)**: La tua agilità e velocità ti rendono perfetta per il ruolo di estremo. Gli estremi devono essere rapidi e sicuri, capaci di coprire il campo e supportare gli attaccanti con abilità.';
-                } else {
-                    positionInfo = 'La tua combinazione di peso e altezza può essere adatta a diversi ruoli. Ti invitiamo a scoprire quale posizione ti si addice di più!';
-                }
-            }
-        } else { // Minorenni
-            if (sesso === 'maschio') {
-                if (peso > 70 && altezza >= 170) {
-                    positionInfo = '💪 **Pilone (Prop)**: La tua forza e corporatura sono ideali per un giovane pilone. Anche se sei giovane, hai il potenziale per eccellere nella mischia e giocare un ruolo vitale nella squadra.';
-                } else if (peso > 65 && altezza >= 160 && altezza < 170) {
-                    positionInfo = '⚔️ **Mediano di Mischia (Scrum-half)**: Sei agile e veloce, il che ti rende un ottimo mediano di mischia. Gestirai il gioco con intelligenza e flessibilità, collegando tutte le fasi della partita.';
-                } else if (peso <= 60 && altezza >= 160) {
-                    positionInfo = '🏃 **Ala (Wing)**: Con la tua agilità e velocità, sei perfetto per il ruolo di ala. Gli ali giovani devono essere rapidi e pronti a sfruttare ogni opportunità di attacco.';
-                } else {
-                    positionInfo = 'La tua combinazione di peso e altezza è adatta per vari ruoli. Ti incoraggio a provare diverse posizioni e scoprire quella che meglio si adatta alle tue caratteristiche!';
-                }
-            } else if (sesso === 'femmina') {
-                if (peso > 60 && altezza >= 160) {
-                    positionInfo = '🦸 **Seconda Linea (Lock)**: La tua altezza e peso ti rendono adatta a giocare come seconda linea. Anche se sei giovane, la tua presenza in campo sarà significativa nelle situazioni di mischia e line-out.';
-                } else if (peso <= 60 && altezza >= 155) {
-                    positionInfo = '📈 **Mediano di Mischia (Scrum-half)**: La tua agilità e capacità di prendere decisioni ti rendono adatta per il ruolo di mediano di mischia. Sarai il cervello della squadra, guidando il gioco con intelligenza e rapidità.';
-                } else if (peso <= 55 && altezza < 160) {
-                    positionInfo = '💨 **Ala (Wing)**: Sei perfetta per il ruolo di ala grazie alla tua velocità e agilità. Gli ali giovani devono essere rapidi e pronti a segnare, sfruttando ogni opportunità.';
-                } else {
-                    positionInfo = 'La tua combinazione di peso e altezza è adatta per vari ruoli. Ti incoraggio a esplorare diverse posizioni e trovare quella che ti si addice di più!';
-                }
-            }
-        }
-
-        document.getElementById('position-info').innerText = positionInfo;
-        document.getElementById('position-info').style.display = 'block';
-    });
-</script>
 </body>
 </html>
+
