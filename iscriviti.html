@@ -64,7 +64,7 @@ if (eta >= 18) {
             positionInfo = '🏉 **Tallonatore (Hooker)**: La tua altezza ti rende perfetto per il ruolo di tallonatore. Sarai fondamentale nelle mischie e nelle touche, mostrando forza e tecnica.';
             positionImage = 'https://i.ytimg.com/vi/o0VQoEvPzGk/maxresdefault.jpg';
             positionCaption = 'Jamie George, Inghilterra';
-else if (altezza > 180 && altezza <= 195 && peso > 65 && peso <= 90) {
+        } else if (altezza > 180 && altezza <= 195 && peso > 65 && peso <= 90) {
             positionInfo = '🏉 **Mediano d\'Apertura (Fly-half)**: Con la tua altezza e visione di gioco, sarai il cervello della squadra. Gestirai l\'attacco e guiderai le strategie con abilità e decisione.';
             positionImage = 'https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2021/02/GettyImages-1246850807-scaled.jpg';
             positionCaption = 'Finn Russell, Scozia';
@@ -192,8 +192,7 @@ else if (altezza > 180 && altezza <= 195 && peso > 65 && peso <= 90) {
                 document.getElementById('position-info').innerText = positionInfo;
                 document.getElementById('position-info').style.display = 'block';
                 if (positionImage) {
-                    document.getElementById('position-image').innerHTML = '<img src="' + positionImage + '" alt="' + positionCaption + '"><p>' + positionCaption + '</p>';
-
+                    document.getElementById('position-image').innerHTML = '<img src="' + positionImage + '" alt="Image" width="200">';
                     document.getElementById('position-image').style.display = 'block';
                 } else {
                     document.getElementById('position-image').style.display = 'none';
