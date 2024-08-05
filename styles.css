@@ -131,11 +131,20 @@ small {
     max-width: 1200px;
 }
 
+/* Aggiungi questi stili per garantire che il banner si estenda correttamente */
+.allenamenti-page header .container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+}
+
 .allenamenti-page #map {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }
+
 
 /* Stili per la pagina Partite ed Eventi */
 #partite-eventi .event {
