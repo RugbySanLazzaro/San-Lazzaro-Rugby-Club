@@ -264,6 +264,7 @@
       <div class="container">
         <h2>Iscriviti</h2>
         <form id="registration-form" action="https://formspree.io/f/xeojgrdv" method="post" name="registration-form">
+          <!-- Aggiungi questo campo all'interno del tag <form> del tuo formulario -->
           <label for="nome">Nome:</label> <input type="text" id="nome" name="nome" required=""><br>
           <label for="cognome">Cognome:</label> <input type="text" id="cognome" name="cognome" required=""><br>
           <label for="sesso">Sesso:</label> <select id="sesso" name="sesso" required="">
@@ -275,6 +276,7 @@
             </option>
           </select><br>
           <label for="eta">Età:</label> <input type="number" id="eta" name="eta" required=""><br>
+          <label for="email">Email:</label> <input type="email" id="email" name="email" required><br>
           <p>Opzionale: Se vuoi conoscere la posizione che è più adatta a te, compila anche i seguenti campi.</p><label for="peso">Peso (kg):</label> <input type="number" id="peso" name="peso" step="0.1"><br>
           <label for="altezza">Altezza (cm):</label> <input type="number" id="altezza" name="altezza" step="0.1"><br>
           <button type="button" id="show-position">Mostra la mia posizione</button> <input type="submit" value="Invia">
