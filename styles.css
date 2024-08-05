@@ -16,14 +16,14 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Ensure no wrapping */
+    flex-wrap: nowrap;
 }
 
 header h1 {
     margin: 0;
     padding: 0 20px;
-    font-size: 1.8em; /* Adjusted to prevent line breaks */
-    white-space: nowrap; /* Prevent line breaks */
+    font-size: 1.8em;
+    white-space: nowrap;
 }
 
 header nav ul {
@@ -96,7 +96,7 @@ footer p {
 .logo {
     width: 100px;
     height: auto;
-    margin-right: 20px; /* Adjust spacing if needed */
+    margin-right: 20px;
 }
 
 .column {
@@ -117,22 +117,40 @@ small {
     font-size: 0.9em;
     margin-bottom: 5px;
 }
+
 /* Stili per la pagina Allenamenti */
 .allenamenti-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Centra il testo all'interno della pagina */
+    text-align: center;
 }
 
 .allenamenti-page .container {
-    width: 100%; /* Assicurati che il contenitore si estenda per tutta la larghezza della pagina */
-    max-width: 1200px; /* Imposta una larghezza massima per evitare che il contenuto sia troppo largo */
+    width: 100%;
+    max-width: 1200px;
 }
 
 .allenamenti-page #map {
     width: 100%;
-    max-width: 600px; /* Imposta una larghezza massima per la mappa */
-    margin: 0 auto; /* Centra la mappa orizzontalmente */
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+/* Stili per la pagina Partite ed Eventi */
+#partite-eventi .event {
+    background: #e0e0e0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#partite-eventi .event h3 {
+    margin-top: 0;
+    color: #007BFF;
+}
+
+#partite-eventi .event p {
+    color: #333;
+}
