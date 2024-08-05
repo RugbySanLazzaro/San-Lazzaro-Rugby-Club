@@ -80,7 +80,7 @@ if (eta >= 18) {
             positionInfo = '🏉 **Fullback (Full-back)**: Con la tua abilità di leggere il gioco e la velocità, sarai perfetto per il ruolo di fullback, gestendo la difesa e supportando l’attacco.';
             positionImage = 'https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/03/12/3336459-68209448-2560-1440.jpg';
             positionCaption = 'Ange Capuozzo, Italia';
-        } else if (peso < 110 && peso > 80 altezza && < 193 && altezza >= 180) {
+        } else if (peso < 110 && peso > 80 && altezza && < 193 && altezza >= 180) {
             positionInfo = '🏉 **Terza Linea (Loose Forward)**: Sei alto e robusto, il che ti rende perfetto per irrompere nella difesa avversaria, placcare con decisione e proteggere la palla nei punti d\'incontro';
             positionImage = 'https://lh3.googleusercontent.com/8Sz9FEG71tU7eONlQAYR6o8XeO5GRUTv-sUgmBwl9dy0W94KjinyKt7w8NuJHem0SQI2gHOKVLDq0PpJfQIGsGzKrUFMSk4a';
             positionCaption = 'Pieter Steph du Toit, Sudafrica';
@@ -209,13 +209,11 @@ if (eta >= 18) {
 }
 
 
-                document.getElementById('position-info').innerText = positionInfo;
-                document.getElementById('position-info').style.display = 'block';
-                if (positionImage) {
-                    document.getElementById('position-image').innerHTML = '<img src="' + positionImage + '" alt="Image" width="200">';
-                    document.getElementById('position-image').style.display = 'block';
-                } else {
-                    document.getElementById('position-image').style.display = 'none';
+            document.getElementById('position-info').innerText = positionInfo;
+            document.getElementById('position-info').style.display = 'block';
+            document.getElementById('position-image').innerHTML = '<img src="' + positionImage + '" alt="Immagine della posizione" style="width: 100%; max-width: 400px;" />';
+            document.getElementById('position-caption').innerText = positionCaption;
+            document.getElementById('position-image').style.display = 'block';
                 }
             });
         });
