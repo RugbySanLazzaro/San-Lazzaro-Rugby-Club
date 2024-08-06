@@ -1,15 +1,38 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset and Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    line-height: 1.6;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-image: url('rugby-pitches.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, p {
+    color: #fff;
+}
+
+/* Header Styles */
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 header .container {
@@ -43,34 +66,50 @@ header nav ul li a {
     font-size: 1.1em;
 }
 
-main {
-    padding: 20px 0;
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Main Content Styles */
+main {
+    padding: 20px 0;
 }
 
 section {
     margin: 40px 0;
     padding: 20px;
-    background: #f4f4f4;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
 
 h2 {
-    color: #333;
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 p {
-    color: #666;
+    color: #ccc;
     font-size: 1.2em;
 }
 
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Button Styles */
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
@@ -81,24 +120,7 @@ p {
     font-size: 1.2em;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1em;
-}
-
-.logo {
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
-}
-
+/* Column Layout Styles */
 .column {
     flex: 1;
     padding: 10px;
@@ -111,6 +133,7 @@ footer p {
     align-items: flex-start;
 }
 
+/* Small Text Styles */
 small {
     display: block;
     color: #999;
@@ -118,7 +141,7 @@ small {
     margin-bottom: 5px;
 }
 
-/* Stili per la pagina Allenamenti */
+/* Training Page Styles */
 .allenamenti-page {
     display: flex;
     flex-direction: column;
@@ -131,7 +154,6 @@ small {
     max-width: 1200px;
 }
 
-/* Aggiungi questi stili per garantire che il banner si estenda correttamente */
 .allenamenti-page header .container {
     width: 100%;
     max-width: none;
@@ -145,8 +167,7 @@ small {
     margin: 0 auto;
 }
 
-
-/* Stili per la pagina Partite ed Eventi */
+/* Event Page Styles */
 #partite-eventi .event {
     background: #e0e0e0;
     padding: 20px;
@@ -163,7 +184,8 @@ small {
 #partite-eventi .event p {
     color: #333;
 }
-/* Stili per la sezione FAQ */
+
+/* FAQ Section Styles */
 #faq {
     padding: 20px 0;
 }
@@ -198,15 +220,19 @@ small {
 .faq-answer {
     display: none;
     padding: 15px;
-    background-color: #f4f4f4;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 0 0 5px 5px;
     font-size: 1em;
     line-height: 1.6;
+    color: #000;
 }
 
 .faq-answer p {
     margin: 0;
+    color: #000;
 }
+
+/* Contact Section Styles */
 .contact-info {
     display: flex;
     align-items: center;
@@ -232,62 +258,4 @@ small {
     margin-top: 10px;
     font-size: 0.9em;
     color: #555;
-}
-/* Background image for specific section */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.6;
-    background-image: url('rugby-pitches.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-}
-
-header, section, footer {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-h1, h2, p {
-    color: #fff;
-}
-
-/* Il resto dei tuoi stili rimane invariato */
-
-.faq-answer {
-    display: none;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente per migliorare la leggibilità */
-    border-radius: 0 0 5px 5px;
-    font-size: 1em;
-    line-height: 1.6;
-    color: #000; /* Colore del testo nero per contrastare con lo sfondo */
-}
-
-.faq-answer p {
-    margin: 0;
-}
-
-.faq-question {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    text-align: left;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s ease;
-}
-
-.faq-question:hover {
-    background-color: #0056b3;
 }
