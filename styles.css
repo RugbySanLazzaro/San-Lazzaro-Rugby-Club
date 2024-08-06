@@ -234,29 +234,11 @@ small {
     color: #555;
 }
 /* Background image for specific section */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.6;
+.background-image {
     background-image: url('rugby-pitches.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff;
+    padding: 20px 0; /* Per mantenere il padding della sezione */
 }
-
-header, section, footer {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-h1, h2, p {
-    color: #fff;
-}
-
-/* Il resto dei tuoi stili rimane invariato */
-
