@@ -12,6 +12,7 @@ header {
     padding: 10px 0;
 }
 
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -231,7 +232,15 @@ small {
 .caption {
     margin-top: 10px;
     font-size: 0.9em;
-    color: #555;
+    color: #ffffff;
+}
+.contact-bg {
+    background-color: rgba(0, 0, 0, 0.7); /* Sfondo semi-trasparente nero */
+    padding: 5px 10px; /* Aggiungi padding per migliorare la leggibilità */
+    border-radius: 5px; /* Arrotonda i bordi */
+    display: inline-block; /* Assicura che lo sfondo si adatti al contenuto */
+    color: #fff; /* Colore del testo bianco per contrastare con lo sfondo */
+    margin-bottom: 10px; /* Spazio tra gli elementi */
 }
 /* Background image for specific section */
 body {
