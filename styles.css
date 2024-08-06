@@ -235,11 +235,11 @@ small {
     color: #ffffff;
 }
 .contact-bg {
-    background-color: rgba(0, 0, 0, 0.7); /* Sfondo semi-trasparente nero */
+    background-color: rgba(255, 255, 255, 0.7); /* Sfondo semi-trasparente bianco */
     padding: 5px 10px; /* Aggiungi padding per migliorare la leggibilità */
     border-radius: 5px; /* Arrotonda i bordi */
     display: inline-block; /* Assicura che lo sfondo si adatti al contenuto */
-    color: #fff; /* Colore del testo bianco per contrastare con lo sfondo */
+    color: #000; /* Colore del testo nero per contrastare con lo sfondo bianco */
     margin-bottom: 10px; /* Spazio tra gli elementi */
 }
 /* Background image for specific section */
