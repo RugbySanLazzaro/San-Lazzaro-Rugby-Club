@@ -1,29 +1,36 @@
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
+    background-image: url('rugby-pitches.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
 }
 
 header h1 {
     margin: 0;
     padding: 0 20px;
-    font-size: 1.8em;
-    white-space: nowrap;
+    font-size: 2em;
 }
 
 header nav ul {
@@ -34,17 +41,24 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
+header nav ul li a:hover {
+    color: #00bfff;
+}
+
+/* Main Content Styles */
 main {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .container {
@@ -55,37 +69,46 @@ main {
 
 section {
     margin: 40px 0;
-    padding: 20px;
-    background: #f4f4f4;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    color: #333;
-    font-size: 2em;
-    margin-bottom: 10px;
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 15px;
 }
 
 p {
-    color: #666;
+    color: #ddd;
     font-size: 1.2em;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
+    padding: 15px 30px;
+    background-color: #00bfff;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
+.cta-button:hover {
+    background-color: #1e90ff;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
 footer {
-    background-color: #333;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
 
 footer p {
@@ -93,79 +116,41 @@ footer p {
     font-size: 1em;
 }
 
-.logo {
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
+/* Gallery Styles */
+#gallery {
+    padding: 40px 0;
 }
 
-.column {
-    flex: 1;
-    padding: 10px;
-    margin: 10px;
-}
-
-.three-column {
+.gallery-grid {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-small {
-    display: block;
-    color: #999;
-    font-size: 0.9em;
-    margin-bottom: 5px;
+.gallery-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Stili per la pagina Allenamenti */
-.allenamenti-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.allenamenti-page .container {
+.gallery-item img {
     width: 100%;
-    max-width: 1200px;
+    border-radius: 10px;
 }
 
-/* Aggiungi questi stili per garantire che il banner si estenda correttamente */
-.allenamenti-page header .container {
-    width: 100%;
-    max-width: none;
-    padding: 0;
-    margin: 0;
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.allenamenti-page #map {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-
-/* Stili per la pagina Partite ed Eventi */
-#partite-eventi .event {
-    background: #e0e0e0;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#partite-eventi .event h3 {
-    margin-top: 0;
-    color: #007BFF;
-}
-
-#partite-eventi .event p {
-    color: #333;
-}
-/* Stili per la sezione FAQ */
+/* FAQ Styles */
 #faq {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 #faq .container {
@@ -188,136 +173,61 @@ small {
     font-size: 1.2em;
     cursor: pointer;
     outline: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .faq-question:hover {
     background-color: #0056b3;
+    transform: scale(1.02);
 }
 
 .faq-answer {
     display: none;
     padding: 15px;
-    background-color: #f4f4f4;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0 0 5px 5px;
     font-size: 1em;
     line-height: 1.6;
-}
-
-.faq-answer p {
-    margin: 0;
-}
-.contact-info {
-    display: flex;
-    align-items: center;
-}
-
-.contact-details {
-    flex: 1;
-}
-
-.contact-image {
-    text-align: center;
-    margin-left: 20px;
-}
-
-.rounded-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.caption {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #555;
-}
-/* Background image for specific section */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.6;
-    background-image: url('rugby-pitches.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-}
-
-header, section, footer {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-h1, h2, p {
-    color: #fff;
-}
-
-/* Il resto dei tuoi stili rimane invariato */
-
-.faq-answer {
-    display: none;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente per migliorare la leggibilità */
-    border-radius: 0 0 5px 5px;
-    font-size: 1em;
-    line-height: 1.6;
-    color: #000; /* Colore del testo nero per contrastare con lo sfondo */
+    color: #000;
 }
 
 .faq-answer p {
     margin: 0;
 }
 
-.faq-question {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    text-align: left;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s ease;
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
 }
 
-.faq-question:hover {
-    background-color: #0056b3;
-}
-/* Gallery Section Styles */
-#gallery {
-    padding: 20px 0;
-}
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 
-.gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    .cta-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
 }
-
-.gallery-item {
-    flex: 1 1 300px;
-    max-width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
