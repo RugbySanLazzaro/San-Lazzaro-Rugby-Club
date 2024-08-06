@@ -207,6 +207,7 @@ small {
 
 .faq-answer p {
     margin: 0;
+    color: #000; /* Colore nero */
 }
 .contact-info {
     display: flex;
