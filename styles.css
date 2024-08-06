@@ -233,4 +233,12 @@ small {
     font-size: 0.9em;
     color: #555;
 }
-
+/* Background image for specific section */
+.background-image {
+    background-image: url('https://www.as-sportssystems.co.uk/wp-content/uploads/2023/09/rugby-pitches.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 0; /* Per mantenere il padding della sezione */
+}
