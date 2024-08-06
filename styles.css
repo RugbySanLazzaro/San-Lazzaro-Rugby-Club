@@ -260,3 +260,34 @@ h1, h2, p {
 
 /* Il resto dei tuoi stili rimane invariato */
 
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente per migliorare la leggibilità */
+    border-radius: 0 0 5px 5px;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #000; /* Colore del testo nero per contrastare con lo sfondo */
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-question {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #0056b3;
+}
