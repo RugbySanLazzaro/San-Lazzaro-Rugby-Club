@@ -1,9 +1,26 @@
+/* Stili globali */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
+    background-image: url('rugby-pitches.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+header, section, footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1, h2, p {
+    color: #fff;
 }
 
 header {
@@ -118,7 +135,6 @@ small {
     margin-bottom: 5px;
 }
 
-/* Stili per la pagina Allenamenti */
 .allenamenti-page {
     display: flex;
     flex-direction: column;
@@ -131,7 +147,6 @@ small {
     max-width: 1200px;
 }
 
-/* Aggiungi questi stili per garantire che il banner si estenda correttamente */
 .allenamenti-page header .container {
     width: 100%;
     max-width: none;
@@ -145,8 +160,6 @@ small {
     margin: 0 auto;
 }
 
-
-/* Stili per la pagina Partite ed Eventi */
 #partite-eventi .event {
     background: #e0e0e0;
     padding: 20px;
@@ -163,7 +176,7 @@ small {
 #partite-eventi .event p {
     color: #333;
 }
-/* Stili per la sezione FAQ */
+
 #faq {
     padding: 20px 0;
 }
@@ -198,16 +211,17 @@ small {
 .faq-answer {
     display: none;
     padding: 15px;
-    background-color: #f4f4f4;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 0 0 5px 5px;
     font-size: 1em;
     line-height: 1.6;
+    color: #000;
 }
 
 .faq-answer p {
     margin: 0;
 }
-/* Stili per la pagina contatti */
+
 .contact-info {
     display: flex;
     align-items: center;
@@ -232,78 +246,19 @@ small {
 .caption {
     margin-top: 10px;
     font-size: 0.9em;
-    color: #000;
+    color: #555;
 }
 
-#contatti .email-link {
-    color: #ffdd57; /* Colore chiaro per migliorare la leggibilità */
-    font-weight: bold; /* Opzionale: rende il testo più visibile */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Ombra del testo per contrasto */
-}
-
-#contatti .email-link:hover {
-    color: #fff; /* Colore del testo quando l'utente passa il mouse sopra */
-}
-
-/* Background image for specific section */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.6;
-    background-image: url('rugby-pitches.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-}
-
-header, section, footer {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-h1, h2, p {
-    color: #fff;
-}
-
-/* Il resto dei tuoi stili rimane invariato */
-
-.faq-answer {
-    display: none;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente per migliorare la leggibilità */
-    border-radius: 0 0 5px 5px;
-    font-size: 1em;
-    line-height: 1.6;
-    color: #000; /* Colore del testo nero per contrastare con lo sfondo */
-}
-
-.faq-answer p {
-    margin: 0;
-}
-
-.faq-question {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 15px;
-    border: none;
+/* Stili per aggiungere sfondo dietro le scritte */
+.contact-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
     border-radius: 5px;
-    width: 100%;
-    text-align: left;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s ease;
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-.faq-question:hover {
-    background-color: #0056b3;
-}
-/* Gallery Section Styles */
 #gallery {
     padding: 20px 0;
 }
@@ -332,3 +287,4 @@ h1, h2, p {
 .gallery-item:hover {
     transform: scale(1.05);
 }
+
