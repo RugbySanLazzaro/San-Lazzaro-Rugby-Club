@@ -207,7 +207,6 @@ small {
 .faq-answer p {
     margin: 0;
 }
-/* Stili per la pagina contatti */
 .contact-info {
     display: flex;
     align-items: center;
@@ -232,19 +231,8 @@ small {
 .caption {
     margin-top: 10px;
     font-size: 0.9em;
-    color: #000;
+    color: #555;
 }
-
-#contatti .email-link {
-    color: #ffdd57; /* Colore chiaro per migliorare la leggibilità */
-    font-weight: bold; /* Opzionale: rende il testo più visibile */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Ombra del testo per contrasto */
-}
-
-#contatti .email-link:hover {
-    color: #fff; /* Colore del testo quando l'utente passa il mouse sopra */
-}
-
 /* Background image for specific section */
 body {
     font-family: 'Arial', sans-serif;
@@ -332,8 +320,3 @@ h1, h2, p {
 .gallery-item:hover {
     transform: scale(1.05);
 }
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
