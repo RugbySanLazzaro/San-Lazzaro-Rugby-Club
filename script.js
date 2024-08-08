@@ -30,4 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.header-toggle');
+    const navMenu = document.querySelector('header nav ul');
+
+    if (toggleButton && navMenu) {
+        toggleButton.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+        });
+    }
+});
+
 
