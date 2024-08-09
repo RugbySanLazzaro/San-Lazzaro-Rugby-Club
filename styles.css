@@ -204,30 +204,47 @@ img {
 }
 
 /* Stili specifici per le pagine */
-.allenamenti-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+/* Stili specifici per la pagina Allenamenti */
+.allenamenti-page #map iframe {
+    width: 100%;
+    height: auto;
 }
 
-.allenamenti-page .container {
-    width: 100%;
-    max-width: 1200px;
+/* Sezione Allenamenti */
+.allenamenti-section {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
-.allenamenti-page header .container {
-    width: 100%;
-    max-width: none;
-    padding: 0;
-    margin: 0;
+.allenamenti-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
-.allenamenti-page #map {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+.allenamenti-section p {
+    font-size: 1.1rem;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .allenamenti-section {
+        padding: 15px;
+    }
+
+    .allenamenti-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .allenamenti-section p {
+        font-size: 1rem;
+    }
+
+    .allenamenti-page #map iframe {
+        height: 300px; /* Imposta una altezza fissa per le mappe su schermi piccoli */
+    }
+}
+
 
 /* Stili per la pagina Partite ed Eventi */
 #partite-eventi .event {
