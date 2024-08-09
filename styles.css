@@ -346,6 +346,30 @@ img {
     color: #000;
     margin-bottom: 10px;
 }
+/* Impostazioni per visualizzazione su desktop */
+@media (min-width: 769px) {
+    .contact-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .contact-details p {
+        flex: 1 1 auto;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-details p:last-child {
+        margin-right: 0; /* Rimuove il margine dall'ultimo elemento */
+    }
+    
+    .contact-image .caption {
+        text-align: center;
+    }
+}
+
 
 /* Galleria */
 #gallery {
