@@ -431,3 +431,11 @@ img {
         font-size: 1.5rem;
     }
 }
+.responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Limita la larghezza massima per evitare che l'immagine diventi troppo grande */
+    display: block;
+    margin: 10px auto; /* Centra l'immagine */
+}
+
