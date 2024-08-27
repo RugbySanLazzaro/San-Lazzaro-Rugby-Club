@@ -390,10 +390,14 @@ img {
     padding: 10px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    /* Aggiungi un’altezza minima per mantenere le dimensioni della galleria coerenti */
+    min-height: 200px;
+    box-sizing: border-box; /* Include il padding e il bordo nelle dimensioni totali */
 }
 
 .gallery-item img {
     width: 100%;
+    height: auto; /* Mantiene il rapporto di aspetto dell'immagine */
     border-radius: 10px;
 }
 
@@ -430,7 +434,16 @@ img {
     header h1 {
         font-size: 1.5rem;
     }
+
+    .gallery-item {
+        /* Modifica il layout per schermi più piccoli */
+        flex: 1 1 100%;
+        max-width: 100%;
+        /* Rimuovi il padding su schermi molto piccoli per utilizzare lo spazio in modo più efficiente */
+        padding: 5px;
+    }
 }
+
 .responsive-image {
     width: 100%;
     height: auto;
