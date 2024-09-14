@@ -34,15 +34,13 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    position: relative;
-    overflow: hidden;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Cambiato da nowrap a wrap */
+    flex-wrap: nowrap;
 }
 
 header h1 {
@@ -57,12 +55,10 @@ header nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap; /* Permette alle voci di andare a capo su più righe se necessario */
 }
 
 header nav ul li {
     margin: 0 10px;
-    white-space: nowrap; /* Evita che il testo vada a capo */
 }
 
 header nav ul li a {
@@ -114,6 +110,8 @@ header nav ul li a {
         font-size: 1.5rem;
     }
 }
+
+
 
 /* Main Content */
 main {
@@ -247,6 +245,7 @@ img {
     }
 }
 
+
 /* Stili per la pagina Partite ed Eventi */
 #partite-eventi .event {
     background: #e0e0e0;
@@ -347,7 +346,6 @@ img {
     color: #000;
     margin-bottom: 10px;
 }
-
 /* Impostazioni per visualizzazione su desktop */
 @media (min-width: 769px) {
     .contact-details {
@@ -371,6 +369,7 @@ img {
         text-align: center;
     }
 }
+
 
 /* Galleria */
 #gallery {
@@ -443,6 +442,14 @@ img {
         /* Rimuovi il padding su schermi molto piccoli per utilizzare lo spazio in modo più efficiente */
         padding: 5px;
     }
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Limita la larghezza massima per evitare che l'immagine diventi troppo grande */
+    display: block;
+    margin: 10px auto; /* Centra l'immagine */
 }
 
 .responsive-image {
