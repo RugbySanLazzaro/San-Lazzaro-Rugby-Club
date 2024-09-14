@@ -49,18 +49,22 @@ header h1 {
 header nav ul {
     list-style: none;
     display: flex;
+    justify-content: space-evenly; /* Aggiunge spazio uniforme tra le voci */
+    gap: 15px; /* Aumenta lo spazio tra gli elementi del menù */
     margin: 0;
     padding: 0;
 }
 
 header nav ul li {
-    margin: 0 10px;
+    margin: 0;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Riduce leggermente la dimensione del testo */
+    padding: 10px 15px; /* Aggiunge spazio interno per migliorare la leggibilità */
+    white-space: nowrap; /* Impedisce che il testo vada a capo */
 }
 
 /* Menu Responsive */
@@ -106,6 +110,7 @@ header nav ul li a {
         font-size: 1.5rem;
     }
 }
+
 
 /* Main Content */
 main {
