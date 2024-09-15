@@ -257,35 +257,61 @@
 <p>I campi contrassegnati con un <span style="color: red;">*</span> sono obbligatori.</p>
 
 <form id="registration-form" action="https://formspree.io/f/xeojgrdv" method="POST">
-    <label for="nome" class="required-label">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
-    
-    <label for="cognome">Cognome:</label>
-    <input type="text" id="cognome" name="cognome" required>
-    
-    <label for="sesso" class="required-label">Sesso:</label>
-    <select id="sesso" name="sesso" required>
-        <option value="maschio">Maschio</option>
-        <option value="femmina">Femmina</option>
-    </select>
+    <p>I campi con l'asterisco rosso sono obbligatori.</p>
 
-    <label for="eta" class="required-label">Età:</label>
-    <input type="number" id="eta" name="eta" required>
-    
-    <label for="email" class="required-label">E-mail:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="telefono">Numero di telefono:</label>
-    <input type="tel" id="telefono" name="telefono" required>
-    
-    <label for="commenti">Commenti o domande:</label>
-    <textarea id="commenti" name="commenti"></textarea>
+    <div class="form-row">
+        <div class="form-column">
+            <label for="nome">Nome:<span class="required">*</span></label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="form-column">
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" required>
+        </div>
+    </div>
 
-    <label for="peso">Peso (kg):</label>
-    <input type="number" id="peso" name="peso" step="0.1">
+    <div class="form-row">
+        <div class="form-column">
+            <label for="sesso">Sesso:<span class="required">*</span></label>
+            <select id="sesso" name="sesso" required>
+                <option value="maschio">Maschio</option>
+                <option value="femmina">Femmina</option>
+            </select>
+        </div>
+        <div class="form-column">
+            <label for="eta">Età:<span class="required">*</span></label>
+            <input type="number" id="eta" name="eta" required>
+        </div>
+    </div>
 
-    <label for="altezza">Altezza (cm):</label>
-    <input type="number" id="altezza" name="altezza" step="0.1">
+    <div class="form-row">
+        <div class="form-column">
+            <label for="email">E-mail:<span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-column">
+            <label for="telefono">Numero di telefono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <label for="commenti">Commenti o domande:</label>
+        <textarea id="commenti" name="commenti"></textarea>
+    </div>
+
+    <p>Opzionale: Se vuoi conoscere la posizione che è più adatta a te, compila anche i seguenti campi.</p>
+
+    <div class="form-row">
+        <div class="form-column">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" step="0.1">
+        </div>
+        <div class="form-column">
+            <label for="altezza">Altezza (cm):</label>
+            <input type="number" id="altezza" name="altezza" step="0.1">
+        </div>
+    </div>
 
     <button type="button" id="show-position">Mostra la mia posizione</button>
     <input type="submit" value="Invia">
