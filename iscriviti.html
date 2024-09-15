@@ -254,42 +254,43 @@
         <section id="iscriviti">
             <div class="container">
                 <h2>Iscriviti</h2>
-                <form id="registration-form" action="https://formspree.io/f/xeojgrdv" method="POST">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required><br>
+<p>I campi contrassegnati con un <span style="color: red;">*</span> sono obbligatori.</p>
 
+<form id="registration-form" action="https://formspree.io/f/xeojgrdv" method="POST">
+    <label for="nome" class="required-label">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    
     <label for="cognome">Cognome:</label>
-    <input type="text" id="cognome" name="cognome" required><br>
-
-    <label for="sesso">Sesso:</label>
+    <input type="text" id="cognome" name="cognome" required>
+    
+    <label for="sesso" class="required-label">Sesso:</label>
     <select id="sesso" name="sesso" required>
         <option value="maschio">Maschio</option>
         <option value="femmina">Femmina</option>
-    </select><br>
+    </select>
 
-    <label for="eta">Età:</label>
-    <input type="number" id="eta" name="eta" required><br>
+    <label for="eta" class="required-label">Età:</label>
+    <input type="number" id="eta" name="eta" required>
     
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required><br>
+    <label for="email" class="required-label">E-mail:</label>
+    <input type="email" id="email" name="email" required>
     
     <label for="telefono">Numero di telefono:</label>
-    <input type="tel" id="telefono" name="telefono" required><br>
-
+    <input type="tel" id="telefono" name="telefono" required>
+    
     <label for="commenti">Commenti o domande:</label>
-    <textarea id="commenti" name="commenti"></textarea><br>
-
-    <p>Opzionale: Se vuoi conoscere la posizione che è più adatta a te, compila anche i seguenti campi.</p>
+    <textarea id="commenti" name="commenti"></textarea>
 
     <label for="peso">Peso (kg):</label>
-    <input type="number" id="peso" name="peso" step="0.1"><br>
+    <input type="number" id="peso" name="peso" step="0.1">
 
     <label for="altezza">Altezza (cm):</label>
-    <input type="number" id="altezza" name="altezza" step="0.1"><br>
-    
+    <input type="number" id="altezza" name="altezza" step="0.1">
+
     <button type="button" id="show-position">Mostra la mia posizione</button>
     <input type="submit" value="Invia">
 </form>
+
 
                 <div id="position-info"></div>
                 <div id="position-image"></div>
