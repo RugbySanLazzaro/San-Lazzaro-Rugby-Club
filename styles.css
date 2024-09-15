@@ -467,25 +467,29 @@ img {
 #registration-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px; /* Ridotto lo spazio tra le colonne */
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Aggiunta delle colonne per le domande */
 #registration-form label {
     display: block;
     margin-bottom: 5px;
 }
 
-#registration-form input, #registration-form select, #registration-form textarea {
-    width: 100%;
-    padding: 10px;
+#registration-form input,
+#registration-form select,
+#registration-form textarea {
+    width: 90%; /* Ridotto per una maggiore larghezza delle righe di inserimento */
+    padding: 8px; /* Ridotto il padding per una migliore proporzione */
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
-#registration-form button, #registration-form input[type="submit"] {
+#registration-form button,
+#registration-form input[type="submit"] {
     grid-column: span 2;
     padding: 10px 20px;
     margin-top: 10px;
@@ -499,7 +503,8 @@ img {
     justify-self: center;
 }
 
-#registration-form button:hover, #registration-form input[type="submit"]:hover {
+#registration-form button:hover,
+#registration-form input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
@@ -511,17 +516,21 @@ img {
 }
 
 /* Aggiunta margini per ridurre lo spazio tra i campi */
-#registration-form input, #registration-form select, #registration-form textarea {
+#registration-form input,
+#registration-form select,
+#registration-form textarea {
     margin-bottom: 15px;
 }
 
 /* Regolazione per commenti e campi opzionali */
 #registration-form textarea {
     grid-column: span 2;
+    width: 90%; /* Ridotto per una maggiore larghezza */
 }
 
 /* Peso e Altezza in due colonne */
-#peso, #altezza {
+#peso,
+#altezza {
     grid-column: span 1;
 }
 
