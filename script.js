@@ -36,9 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (toggleButton && navMenu) {
         toggleButton.addEventListener('click', function() {
+            console.log('Toggle button clicked'); // Debug
             navMenu.classList.toggle('open');
+            console.log('Menu classes:', navMenu.className); // Debug
         });
+    } else {
+        console.log('Toggle button or navMenu not found'); // Debug
     }
 });
-
 
