@@ -34,9 +34,16 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Sposta tutto verso sinistra */
     align-items: center;
     flex-wrap: nowrap;
+    max-width: 95%; /* Aggiunto per evitare lo strabordo sul lato destro */
+    margin: 0 auto;
+}
+
+header .logo {
+    width: 120px; /* Dimensione del logo riportata alle impostazioni precedenti */
+    height: auto;
 }
 
 header h1 {
@@ -49,8 +56,8 @@ header h1 {
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-evenly; /* Aggiunge spazio uniforme tra le voci */
-    gap: 15px; /* Aumenta lo spazio tra gli elementi del menù */
+    justify-content: space-evenly;
+    gap: 15px; /* Mantiene lo spazio tra le voci del menù */
     margin: 0;
     padding: 0;
 }
@@ -62,9 +69,9 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem; /* Riduce leggermente la dimensione del testo */
-    padding: 10px 15px; /* Aggiunge spazio interno per migliorare la leggibilità */
-    white-space: nowrap; /* Impedisce che il testo vada a capo */
+    font-size: 1rem;
+    padding: 10px 15px;
+    white-space: nowrap;
 }
 
 /* Menu Responsive */
@@ -110,6 +117,7 @@ header nav ul li a {
         font-size: 1.5rem;
     }
 }
+
 
 
 /* Main Content */
