@@ -34,14 +34,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.querySelector('.header-toggle');
     const navMenu = document.querySelector('header nav ul');
 
+    // Funzione per chiudere il menu se si clicca fuori
+    function closeMenu(event) {
+        if (!navMenu.contains(event.target) && !toggleButton.contains(event.target)) {
+            navMenu.classList.remove('open');
+            document.removeEventListener('click', closeMenu); // Rimuovi l'evento una volta chiuso
+        }
+    }
+
     if (toggleButton && navMenu) {
-        toggleButton.addEventListener('click', function() {
-            console.log('Toggle button clicked'); // Debug
+        toggleButton.addEventListener('click', function(event) {
             navMenu.classList.toggle('open');
-            console.log('Menu classes:', navMenu.className); // Debug
+
+            // Se il menu è aperto, aggiungi il listener per chiudere cliccando fuori
+            if (navMenu.classList.contains('open')) {
+                document.addEventListener('click', closeMenu);
+            } else {
+                document.removeEventListener('click', closeMenu);
+            }
+
+            // Previeni la propagazione del click quando si preme sull'hamburger
+            event.stopPropagation();
         });
     } else {
         console.log('Toggle button or navMenu not found'); // Debug
     }
 });
-
