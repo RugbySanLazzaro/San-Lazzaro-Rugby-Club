@@ -438,6 +438,7 @@ img {
 /* Pagina Iscriviti */
 /* Stile per i campi del form */
 /* Stili per la larghezza ridotta dei campi e la disposizione in due colonne */
+
 #registration-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -494,14 +495,15 @@ img {
     grid-column: span 2;
 }
 
-#registration-form p {
-    grid-column: span 2;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 /* Peso e Altezza in due colonne */
 #peso, #altezza {
     grid-column: span 1;
+}
+
+/* Testi centrali fuori dalle colonne */
+.central-text {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
