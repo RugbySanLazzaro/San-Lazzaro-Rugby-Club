@@ -60,13 +60,13 @@ header nav ul {
     gap: 15px; /* Mantiene lo spazio tra le voci del menù */
     margin: 0;
     padding: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Aggiunta transizione */
 }
 
 /* Aggiunta transizione per il menu */
 header nav ul {
-    transform: translateX(-100%); /* Inizialmente nascosto a sinistra */
-    opacity: 0;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transform: translateX(0); /* Mostra il menù di default */
+    opacity: 1;
 }
 
 header nav ul.open {
@@ -110,13 +110,13 @@ header nav ul li a {
         right: 0;
         z-index: 1000;
         text-align: center;
-        transform: translateX(0); /* Mostra il menù di default su mobile */
-        opacity: 1;
+        transform: translateX(-100%); /* Inizialmente nascosto a sinistra */
+        opacity: 0;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     }
 
     header nav ul.open {
-        display: flex;
-        transform: translateX(0); /* Mostra il menù quando aperto */
+        transform: translateX(0); /* Mostra il menù */
         opacity: 1;
     }
 
@@ -141,6 +141,7 @@ header nav ul li a {
         width: 100px; /* Riduce leggermente la dimensione del logo su mobile */
     }
 }
+
 
 /* Galleria */
 #gallery {
