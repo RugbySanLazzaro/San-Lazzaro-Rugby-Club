@@ -435,4 +435,20 @@ img {
     display: block;
     margin: 10px auto;
 }
+/* Pagina Iscriviti */
+/* Stile per i campi del form */
+form#registration-form label,
+form#registration-form input,
+form#registration-form select,
+form#registration-form textarea,
+form#registration-form button {
+    margin-bottom: 10px; /* Aggiunge spazio tra le righe */
+    display: block;
+    width: 100%; /* Assicura che gli elementi occupino l'intera larghezza disponibile */
+}
+
+/* Stile per specificare che il pulsante non deve essere troppo distante */
+form#registration-form button {
+    margin-bottom: 20px;
+}
 
