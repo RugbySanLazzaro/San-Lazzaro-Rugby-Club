@@ -92,8 +92,41 @@ header nav ul li a {
     cursor: pointer;
     font-size: 1.5rem;
     color: #fff;
+    position: relative;
+    width: 30px;
+    height: 30px;
 }
 
+.header-toggle::before,
+.header-toggle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header-toggle::before {
+    top: 10px;
+}
+
+.header-toggle::after {
+    top: 17px;
+}
+
+.header-toggle.open::before {
+    transform: rotate(45deg);
+    top: 15px;
+}
+
+.header-toggle.open::after {
+    transform: rotate(-45deg);
+    top: 15px;
+}
+
+/* Modifiche per mobile */
 @media (max-width: 768px) {
     .header-toggle {
         display: block;
@@ -141,7 +174,6 @@ header nav ul li a {
         width: 100px; /* Riduce leggermente la dimensione del logo su mobile */
     }
 }
-
 
 /* Galleria */
 #gallery {
