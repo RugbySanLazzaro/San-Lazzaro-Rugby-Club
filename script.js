@@ -62,4 +62,3 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Toggle button or navMenu not found'); // Debug
     }
 });
-
