@@ -61,14 +61,14 @@ header nav ul {
     margin: 0;
     padding: 0;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-    opacity: 1; /* Assicurati che il menu sia visibile su desktop */
-    transform: translateX(0); /* Rimuovi la trasformazione su desktop */
-    position: static; /* Rendi il menu statico su desktop */
-    background-color: transparent; /* Sfondo trasparente su desktop */
+    opacity: 1; /* Mostra il menu per la visualizzazione desktop */
+    transform: translateX(0); /* Mostra il menu per la visualizzazione desktop */
+    position: static; /* Ripristina la posizione per la visualizzazione desktop */
+    background-color: #333;
 }
 
 header nav ul.open {
-    transform: translateX(0); /* Mantieni la trasformazione per mobile */
+    transform: translateX(0);
     opacity: 1;
 }
 
@@ -86,7 +86,7 @@ header nav ul li a {
 
 /* Menu Responsive */
 .header-toggle {
-    display: none; /* Nascondi l'hamburger su desktop */
+    display: none;
     cursor: pointer;
     font-size: 1.5rem;
     color: #fff;
@@ -120,7 +120,7 @@ header nav ul li a {
 /* Modifiche per allineare logo e titolo allo stesso livello */
 @media (max-width: 768px) {
     .header-toggle {
-        display: block; /* Mostra l'hamburger su mobile */
+        display: block;
         margin-left: 20px;
     }
 
@@ -129,6 +129,18 @@ header nav ul li a {
         flex-direction: column;
         text-align: center;
         z-index: 1000;
+        position: absolute; /* Posiziona il menu sopra gli altri elementi */
+        top: 60px; /* Aggiusta la posizione del menu */
+        left: 0;
+        right: 0;
+        background-color: #333;
+        opacity: 0; /* Nascondi il menu per la visualizzazione mobile */
+        transform: translateX(-100%); /* Nascondi il menu per la visualizzazione mobile */
+    }
+
+    header nav ul.open {
+        opacity: 1;
+        transform: translateX(0);
     }
 
     header nav ul li {
