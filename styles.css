@@ -61,11 +61,13 @@ header nav ul {
     margin: 0;
     padding: 0;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-header nav ul {
-    transform: translateX(0);
-    opacity: 1;
+    opacity: 0;
+    transform: translateX(-100%);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
 }
 
 header nav ul.open {
@@ -93,14 +95,29 @@ header nav ul li a {
     color: #fff;
     background: none;
     border: none;
+    position: relative;
+    z-index: 1001;
 }
 
-.header-toggle.open::before {
-    content: '\2715'; /* Codice Unicode per la X */
+.header-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease;
 }
 
-.header-toggle::before {
-    content: '\2630'; /* Codice Unicode per l'hamburger */
+.header-toggle.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.header-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.header-toggle.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Modifiche per allineare logo e titolo allo stesso livello */
@@ -113,21 +130,8 @@ header nav ul li a {
     header nav ul {
         display: flex;
         flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        z-index: 1000;
         text-align: center;
-        transform: translateX(-100%);
-        opacity: 0;
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-    }
-
-    header nav ul.open {
-        transform: translateX(0);
-        opacity: 1;
+        z-index: 1000;
     }
 
     header nav ul li {
