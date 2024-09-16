@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeMenu(event) {
         if (!navMenu.contains(event.target) && !toggleButton.contains(event.target)) {
             navMenu.classList.remove('open');
-            toggleButton.classList.remove('open'); // Rimuove la classe per mostrare l'hamburger
+            toggleButton.classList.remove('open'); // Rimuove la classe per tornare all'hamburger
             document.removeEventListener('click', closeMenu); // Rimuovi l'evento una volta chiuso
         }
     }
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (toggleButton && navMenu) {
         toggleButton.addEventListener('click', function(event) {
             navMenu.classList.toggle('open');
-            toggleButton.classList.toggle('open'); // Aggiunge/rimuove la classe per cambiare icona
+            toggleButton.classList.toggle('open'); // Cambia tra hamburger e X
 
             // Se il menu è aperto, aggiungi il listener per chiudere cliccando fuori
             if (navMenu.classList.contains('open')) {
@@ -62,4 +62,3 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Toggle button or navMenu not found'); // Debug
     }
 });
-
