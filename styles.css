@@ -92,41 +92,46 @@ header nav ul li a {
     cursor: pointer;
     font-size: 1.5rem;
     color: #fff;
-    position: relative;
-    width: 30px;
-    height: 30px;
-}
-
-.header-toggle::before,
-.header-toggle::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: relative; /* Necessario per posizionare l'icona X sopra l'hamburger */
 }
 
 .header-toggle::before {
-    top: 10px;
-}
-
-.header-toggle::after {
-    top: 17px;
+    content: '\2630'; /* Codice Unicode per l'hamburger */
+    display: block;
 }
 
 .header-toggle.open::before {
-    transform: rotate(45deg);
-    top: 15px;
+    content: '\2715'; /* Codice Unicode per la X */
 }
 
-.header-toggle.open::after {
-    transform: rotate(-45deg);
-    top: 15px;
+/* Mostra l'icona X e nasconde l'hamburger quando il menu è aperto */
+.header-toggle.open .hamburger {
+    display: none;
 }
 
-/* Modifiche per mobile */
+.header-toggle.open .close {
+    display: block;
+}
+
+.hamburger,
+.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stili per la X */
+.close {
+    display: none;
+    font-size: 1.5rem;
+}
+
+/* Modifiche per allineare logo e titolo allo stesso livello */
 @media (max-width: 768px) {
     .header-toggle {
         display: block;
@@ -174,6 +179,7 @@ header nav ul li a {
         width: 100px; /* Riduce leggermente la dimensione del logo su mobile */
     }
 }
+
 
 /* Galleria */
 #gallery {
