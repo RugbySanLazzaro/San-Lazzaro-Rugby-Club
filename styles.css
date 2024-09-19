@@ -554,7 +554,7 @@ img {
 
 .blog-entry h3 a {
     text-decoration: none;
-    color: #333;
+    color: #00BFFF; /* Colore blu chiaro per migliorare la visibilità */
 }
 
 .blog-entry h3 a:hover {
@@ -573,6 +573,11 @@ img {
     color: #666;
     text-align: center;
     margin-top: 10px;
+}
+
+/* Distanza aggiuntiva per l'immagine */
+.blog-entry img {
+    margin-right: 20px; /* Maggiore distanza a sinistra dell'anteprima */
 }
 
 /* Stili per dispositivi mobili */
