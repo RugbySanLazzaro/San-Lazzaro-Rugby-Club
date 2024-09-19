@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Notizie e aggiornamenti dal San Lazzaro Rugby Club. Scopri le ultime novità sul nostro club.">
+    <meta name="description" content="Scopri le ultime notizie e aggiornamenti dal San Lazzaro Rugby Club">
     <title>Blog & Notizie - San Lazzaro Rugby Club</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body class="blog-page">
+<body>
     <header>
         <div class="container">
             <a href="index.html">
@@ -23,27 +24,26 @@
                     <li><a href="iscriviti.html">Iscriviti</a></li>
                     <li><a href="galleria.html">Galleria</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
-                    <li><a href="blog-notizie.html">Blog & Notizie</a></li>
+                    <li><a href="blog-notizie.html" class="active">Blog & Notizie</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="blog-previews">
+        <section id="blog-preview">
             <div class="container">
                 <h2>Ultime Notizie</h2>
-
-                <article class="blog-preview">
+                <div class="blog-post-preview">
                     <a href="blog-articolo-6-membri.html">
-                        <img src="IMG-20240913-WA0038.jpg" alt="San Lazzaro Rugby Club" class="blog-thumbnail">
+                        <img src="IMG-20240913-WA0038.jpg" alt="Rugby team image" class="preview-image">
                     </a>
-                    <div class="blog-info">
-                        <h3><a href="blog-articolo-6-membri.html">Abbiamo raggiunto 6 membri!</a></h3>
+                    <div class="post-description">
                         <small>19/09/2024</small>
-                        <p>Il San Lazzaro Rugby Club ha raggiunto 6 membri attivi! Presto si unirà un esperto giocatore argentino. Inoltre, abbiamo avviato discussioni con il comune per l'illuminazione del campo e acquistato lampade portatili.</p>
+                        <h3><a href="blog-articolo-6-membri.html">San Lazzaro Rugby Club: raggiunti i primi 6 membri!</a></h3>
+                        <p>Abbiamo raggiunto un traguardo importante: 6 membri si sono già uniti al club, con l'aggiunta imminente di un giocatore argentino esperto. Inoltre, stiamo collaborando con il comune per migliorare l'illuminazione al campo e abbiamo acquistato lampade portatili. Scopri di più su questi sviluppi e sui nostri piani futuri.</p>
                     </div>
-                </article>
+                </div>
             </div>
         </section>
     </main>
@@ -53,6 +53,7 @@
             <p>&copy; 2024 San Lazzaro Rugby Club. Tutti i diritti riservati.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
