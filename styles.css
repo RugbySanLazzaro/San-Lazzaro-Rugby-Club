@@ -528,7 +528,7 @@ img {
     text-align: center;
     margin-bottom: 10px;
 }
-/* stile blog */
+/* Stile blog */
 /* Stili generali per il blog */
 .blog-page .blog-preview {
     padding: 20px 0;
@@ -543,13 +543,13 @@ img {
 }
 
 .blog-entry .blog-thumbnail {
-    width: 150px;
+    width: 100px; /* Immagine molto più piccola */
     height: auto;
-    margin-right: 20px;
+    margin-right: 15px; /* Distanza tra immagine e testo */
 }
 
 .blog-entry .blog-content {
-    max-width: 70%;
+    max-width: 75%;
 }
 
 .blog-entry h3 a {
@@ -559,6 +559,20 @@ img {
 
 .blog-entry h3 a:hover {
     color: #00BFFF;
+}
+
+/* Stili per la pagina del blog */
+.blog-page .blog-thumbnail {
+    width: 80px; /* Immagine leggermente più piccola */
+    height: auto;
+    margin: 10px 0; /* Distanza tra immagine e testo nella pagina del blog */
+}
+
+.blog-page .blog-caption {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Stili per dispositivi mobili */
