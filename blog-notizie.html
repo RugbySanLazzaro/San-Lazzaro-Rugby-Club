@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Le ultime notizie e aggiornamenti sul San Lazzaro Rugby Club. Scopri di più sui nostri progressi e attività.">
+    <meta name="description" content="Blog e notizie dal San Lazzaro Rugby Club">
     <title>Blog & Notizie - San Lazzaro Rugby Club</title>
-    <link rel="canonical" href="https://www.sanlazzarorugby.it/blog-notizie.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body class="blog-page">
     <header>
@@ -26,26 +24,23 @@
                     <li><a href="iscriviti.html">Iscriviti</a></li>
                     <li><a href="galleria.html">Galleria</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="blog-notizie.html">Blog & Notizie</a></li>
+                    <li><a href="blog-notizie.html" class="active">Blog & Notizie</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="blog-previews" class="blog-section">
-            <div class="container">
-                <h2>Blog & Notizie</h2>
-                <div class="blog-preview">
-                    <img src="IMG-20240913-WA0038.jpg" alt="Foto del club" class="blog-preview-image">
-                    <div class="blog-info">
-                        <h3>Raggiunti 6 membri, nuovi sviluppi in corso</h3>
-                        <p>Il San Lazzaro Rugby Club ha raggiunto un traguardo importante con 6 membri attivi e sta pianificando l'aggiunta di un giocatore esperto argentino verso la fine dell'anno...</p>
-                        <a href="post1.html" class="read-more">Leggi di più</a>
-                    </div>
+        <section id="blog" class="container">
+            <article class="blog-post">
+                <a href="articolo1.html">
+                    <img src="IMG-20240913-WA0038.jpg" alt="Rugby San Lazzaro - Nuovi membri" class="blog-thumbnail">
+                </a>
+                <div class="blog-content">
+                    <h2><a href="articolo1.html">Nuovi Membri e Novità per San Lazzaro Rugby Club</a></h2>
+                    <p>Il San Lazzaro Rugby Club ha raggiunto 6 membri! Stiamo anche discutendo con il comune per l'illuminazione del campo e nel frattempo abbiamo acquistato lampade portatili. Giacomo ha messo a disposizione una borsa medica completa. Siamo vicini a raggiungere 10 membri, che ci permetteranno di iscriverci ai tornei touch e utilizzare le docce del PalaYuri.</p>
                 </div>
-            </div>
+            </article>
         </section>
     </main>
 
@@ -54,6 +49,8 @@
             <p>&copy; 2024 San Lazzaro Rugby Club. Tutti i diritti riservati.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
