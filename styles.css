@@ -24,6 +24,31 @@ h1, h2, p {
     margin: 0 auto;
     padding: 0 20px;
 }
+/* Sezione tre colonne homepage */
+.three-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonne della stessa larghezza */
+    grid-gap: 20px; /* Spazio tra le colonne */
+}
+
+.column {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Aggiungi un media query per schermi più piccoli */
+@media (max-width: 768px) {
+    .three-column {
+        grid-template-columns: repeat(2, 1fr); /* Passa a 2 colonne per schermi medi */
+    }
+}
+
+@media (max-width: 480px) {
+    .three-column {
+        grid-template-columns: 1fr; /* Passa a 1 colonna per schermi piccoli */
+    }
+}
 
 /* Header */
 header {
